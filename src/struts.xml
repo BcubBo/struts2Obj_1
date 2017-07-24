@@ -89,7 +89,11 @@
 			<result name="add_failed">/jsp/add_failed.jsp</result>	
 		</action>
 	
-	
+		<action name="user*" class="action.UserBeanAction" method="{1}">
+		
+			<result name="{1}_success">/jsp/{1}_success.jsp</result>
+		</action>
+		
 	
 	</package>
 
