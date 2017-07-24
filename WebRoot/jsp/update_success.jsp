@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>添加失败</title>
+<title>更新方法</title>
 
 </head>
 <body>

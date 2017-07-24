@@ -56,7 +56,7 @@ public class UserBeanAction extends ActionSupport {
 		
 	}///
 	public String delete() {
-		
+		System.out.println("动态调用方法，delete方法调用成功");
 		return "delete_success";
 		
 		
@@ -64,7 +64,7 @@ public class UserBeanAction extends ActionSupport {
 	}////
 	
 	public String update() {
-		
+		System.out.println("动态调用方法，update方法调用成功");
 		return "update_success";
 		
 		

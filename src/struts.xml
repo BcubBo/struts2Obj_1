@@ -7,7 +7,8 @@
 
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="true" />
-
+    <constant name="struts.cofiguration.xml.reload" value="true"></constant>
+	<!-- 开发模式开启和DMI模式,和修改xml文件后不重启设置 -->
 
 
 
