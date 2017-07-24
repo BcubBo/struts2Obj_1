@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+
+
+
+
+    <!-- Add packages here -->
+    <package name="default" namespace="" extends="struts-default">
+    
+    	<action name="index">
+    		<result>/index.jsp</result>
+    	</action>
+    	<action name="error">
+    		<result>/errors.jsp</result>
+    	</action>
+    	<action name="index2"><result>/jsp/index2.jsp</result></action>
+    </package>
+
+    <package name="jsp" namespace="/jsp/erro/jsp/success" extends="struts-default">
+    <!-- namespace的作用就是和项目中的包进行匹配 result结果中要用完全路径 -->
+    	<action name="index">
+    		<result>/jsp/index2.jsp</result>
+    	</action>
+    
+    </package>
+     <package name="action1"  namespace="/jsp/erro" extends="struts-default" >
+    <!-- namespace的作用就是和项目中的包进行匹配 result结果中要用完全路径 -->
+    	<action name="index1" class="action.DefaultAction">
+    		<result name="success">/jsp/success.jsp</result>
+    		<result name="input">/jsp/index2.jsp</result>
+    		<result name="aa">/jsp/index3.jsp</result>
+    	</action>
+     	<action name="index2" class="action.Default1Action">
+    		<result name="success">/jsp/success.jsp</result>
+    		<result name="input">/jsp/index2.jsp</result>
+    		<result name="aa">/jsp/index3.jsp</result>
+    	</action>
+    
+    </package>
+    <!-- ============================ -->
+
+	<package name="user" namespace="/user" extends="default">
+<!-- 		
+		<action name="login" class="action.Login">
+		
+			<result name="success">/jsp/login_success.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		
+		
+		</action> -->
+<!-- 		<action name="login" class="action.UserBeanAction">
+		
+			<result name="success">/jsp/login_success.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+		
+		</action>
+		
+		<action name="model" class="action.ModelDrivenBeanAction">
+			<result name="success">/jsp/modeldriven.jsp</result>	
+		
+			<result name="input">/jsp/login.jsp</result>
+		
+		
+		
+		
+		</action> -->
+<!-- 		<action name="add" class="action.UserBeanAction" method="add">
+		
+			<result name="success">/jsp/add_success.jsp</result>
+			<result name="failed">/jsp/add_failed.jsp</result>
+		
+		</action> -->
+		<!-- 动态方法是用Demo -->
+		<action name="op" class="action.UserBeanAction">
+		
+			<result name="success">/jsp/login_success.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+			<result name="add_success">/jsp/add_success.jsp</result>
+			<result name="delete_success">/jsp/delete_success.jsp</result>		
+			<result name="update_success">/jsp/update_success.jsp</result>	
+			<result name="add_failed">/jsp/add_failed.jsp</result>	
+		</action>
+	
+	
+	
+	</package>
+
+
+
+</struts>
