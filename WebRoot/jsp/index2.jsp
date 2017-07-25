@@ -9,8 +9,8 @@
 </head>
 <body style="background-image:url('<%=path%>/image/2.gif');
 	background-repeat: true;width:auto;height:auto;">
-	<h1><strong>STRUTS2 START!</strong></h1>
-	<h1><strong>INDEX2.JSP</strong></h1>
+	<h1><strong style="background-color: white;">STRUTS2 START!</strong></h1>
+	<h1><strong style="background-color: white;">INDEX2.JSP</strong></h1>
 
 </body>
 </html>

@@ -21,9 +21,10 @@
     		<result name="success">${rs}</result>
     	</action>
 		
-    	<action name="index2">
-    		<result>/jsp/index2.jsp</result>
-    		<exception-mapping result="localError.jsp" exception=""></exception-mapping>
+    	<action name="index2" class="action.Default1Action">
+    		<result name="success">/jsp/index2.jsp</result>
+    		<result name="input">/jsp/add_failed.jsp</result>
+    		<exception-mapping result="success" exception="java.lang.RuntimeException"></exception-mapping>
     	
     	</action>
     </package>

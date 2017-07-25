@@ -1,20 +1,24 @@
 package action;
 
-import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.Action;
 
-public class Default1Action extends ActionSupport {
+public class Default1Action implements Action {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 9208648536924068930L;
 
 	@Override
 	public String execute() throws Exception {
-		System.out.println("继承了ActionSupport类");
-		this.addActionMessage("HelloWorld!");
+
 		
+		if(true) {
+			throw new RuntimeException("测试抛出的异常进行捕获");
+			}
+		
+		System.out.println("实现了Action类");
 		return SUCCESS;
+
 	}
 	
 	
