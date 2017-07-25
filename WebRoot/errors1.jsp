@@ -7,7 +7,7 @@
 <title>ERROR_1!</title>
 </head>
 <body>
-	<h1><strong style="background-color: yellowgreen">ERROR_1!</strong></h1>
+	<h1 style="background-color: yellowgreen"><strong style="">ERROR_1!</strong></h1>
 
 </body>
 </html>
