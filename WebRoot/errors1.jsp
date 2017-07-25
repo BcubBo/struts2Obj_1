@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>ERROR!</title>
+<title>ERROR_1!</title>
 </head>
 <body>
-	<h1><strong style="background-color: yellowgreen">ERROR!</strong></h1>
+	<h1><strong style="background-color: yellowgreen">ERROR_1!</strong></h1>
 
 </body>
 </html>

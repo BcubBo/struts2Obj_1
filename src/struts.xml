@@ -14,13 +14,13 @@
 
     <!-- Add packages here -->
     <package name="default" namespace="" extends="struts-default">
-    
+    	<global-results>
+    		<result name="error">/errors.jsp</result>
+    	</global-results>
     	<action name="index">
     		<result>/index.jsp</result>
     	</action>
-    	<action name="error">
-    		<result>/errors.jsp</result>
-    	</action>
+		
     	<action name="index2"><result>/jsp/index2.jsp</result></action>
     </package>
 
@@ -47,7 +47,7 @@
     </package>
     <!-- ============================ -->
 
-	<package name="user" namespace="/user" extends="struts-default">
+	<package name="user" namespace="/user" extends="default">
 		
 <!-- 		<action name="login" class="action.Login">
 		
@@ -59,17 +59,23 @@
 		<action name="login" class="action.UserBeanAction" >
 		
 <!-- 			<result name="success" type="redirect">/jsp/login_success.jsp</result> -->
-<!-- redirect标签 -->
+			<result name="success" >/jsp/login_success.jsp</result>
+<!-- redirect标签 ，可设置location属性进行访问外网的操作-->
 <!-- 			<result name="success" type="chain">add</result> -->
 <!-- chain链式调用标签 -->
-			<result name="success" type="redirectAction">
+<!-- 			<result name="success" type="redirectAction">
 			
 				<param name="actionName">add</param>
 				<param name="namespace">/user</param>
-			<!-- 要指定namespace位置，防止404 -->
-			</result>
+			要指定namespace位置，防止404
+			</result> -->
 <!-- redirectAction重定向action标签 -->
 			<result name="input">/jsp/login.jsp</result>
+			
+			
+			
+<!-- 			<result name="error">/errors1.jsp</result> -->
+<!-- 局部错误的编写，从最内层向外查找 -->
 		
 		</action>
 		

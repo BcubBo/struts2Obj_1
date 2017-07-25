@@ -27,7 +27,12 @@ public class UserBeanAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 
-		
+/*		if(true) {
+			
+			return "error";
+			
+			
+		}*/
 		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
 		boolean flag = false;
 		//要处理的代码
