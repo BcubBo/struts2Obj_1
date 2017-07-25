@@ -48,15 +48,15 @@
     <!-- ============================ -->
 
 	<package name="user" namespace="/user" extends="struts-default">
-		
-<!-- 		<action name="login" class="action.Login">
+<!-- 		
+		<action name="login" class="action.Login">
 		
 			<result name="success">/jsp/login_success.jsp</result>
 			<result name="input">/jsp/login.jsp</result>
 		
 		
 		</action> -->
-		<action name="login" class="action.UserBeanAction">
+<!-- 		<action name="login" class="action.UserBeanAction">
 		
 			<result name="success">/jsp/login_success.jsp</result>
 			<result name="input">/jsp/login.jsp</result>
@@ -71,13 +71,13 @@
 		
 		
 		
-		</action>
-		<action name="add" class="action.UserBeanAction" method="add">
+		</action> -->
+<!-- 		<action name="add" class="action.UserBeanAction" method="add">
 		
 			<result name="success">/jsp/add_success.jsp</result>
 			<result name="failed">/jsp/add_failed.jsp</result>
 		
-		</action>
+		</action> -->
 		<!-- 动态方法是用Demo -->
 		<action name="op" class="action.UserBeanAction">
 		

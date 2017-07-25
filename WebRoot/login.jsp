@@ -16,8 +16,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	用户登录:<br/>
 	<form action="<%=path %>/user/login" method="post">
 	<!-- name属性里的名称要写相应的bean名称 -->
-		<input type="text" value="" name="username"><br/>
-		<input type="password" value="" name="password"><br/>
+		<input type="text" value="" name="user.username"><br/>
+		<input type="password" value="" name="user.password"><br/>
 		<input type="submit" value="登陆">
 	
 	
