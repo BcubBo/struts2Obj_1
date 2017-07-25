@@ -17,8 +17,8 @@
     	<global-results>
     		<result name="error">/errors.jsp</result>
     	</global-results>
-    	<action name="index">
-    		<result>/index.jsp</result>
+    	<action name="index" class="action.DefaultAction">
+    		<result name="success">${rs}</result>
     	</action>
 		
     	<action name="index2"><result>/jsp/index2.jsp</result></action>
@@ -27,8 +27,11 @@
 
      
 	<include file="struts_user_package.xml"></include>
+	<!-- namespace=user -->
 	<include file="struts_action1_package.xml"></include>
+	<!-- namespace=action1 -->
 	<include file="struts_jsp_package.xml"></include>
+	<!-- namespace=jsp -->
 
 
 </struts>
