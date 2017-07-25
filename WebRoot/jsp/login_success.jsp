@@ -3,6 +3,7 @@
     <%@taglib prefix="s" uri="/struts-tags" %>
     
     
+    
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -14,7 +15,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>成功界面</title>
 </head>
-<body>
+<body style="background-image:url('<%=basePath%>/image/5.gif');
+	background-repeat: true;width:auto;height:auto;">
 	<h1>登陆成功</h1>
 	<h1>用户:${sessionScope.user.username }</h1>
 	<h1>密码:${sessionScope.user.password }</h1>

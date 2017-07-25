@@ -14,7 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>成功界面</title>
 </head>
-<body>
+<body style="background-image:url('<%=basePath%>/image/11.gif');
+	background-repeat: true;width:auto;height:auto;">
 	<h1>默认执行父类execute方法成功界面</h1>
 	<h1><strong><s:actionmessage/></strong></h1>
 	

@@ -14,7 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>成功界面</title>
 </head>
-<body>
+<body style="background-image:url('<%=basePath%>/image/10.gif');
+	background-repeat: true;width:auto;height:auto;">
 	<h1>ModelDriven页面</h1>
 	
 
