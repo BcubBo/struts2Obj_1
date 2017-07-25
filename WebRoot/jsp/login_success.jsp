@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<h2><strong>struts标签显示</strong></h2>
 	<h1><strong>用户:<s:property value="#session.user.username"/></strong></h1>
 	<h1><strong>密码:<s:property value="#session.user.password"/></strong></h1>
-	<h1>action.user</h1>
-	<h1><strong><s:property value=/></strong></h1>
+	<h1>action中的user对象用户名:<s:property value="user.username"/></h1>
+	<h1>action中的user对象密 码:<s:property value="user.username"/></h1>
 </body>
 </html>
