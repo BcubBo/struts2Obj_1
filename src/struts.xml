@@ -21,7 +21,11 @@
     		<result name="success">${rs}</result>
     	</action>
 		
-    	<action name="index2"><result>/jsp/index2.jsp</result></action>
+    	<action name="index2">
+    		<result>/jsp/index2.jsp</result>
+    		<exception-mapping result="localError.jsp" exception=""></exception-mapping>
+    	
+    	</action>
     </package>
 
 
