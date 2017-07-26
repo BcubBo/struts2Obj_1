@@ -40,8 +40,21 @@ public class UserBeanAction extends ActionSupport {
 			flag =true;
 			ActionContext ac = ActionContext.getContext();
 			//获取动作上下文
+			//将对象放入到session中
 		Map<String,Object> result = ac.getSession();
 		result.put("user", this.user);
+		
+		//获取request
+		
+		@SuppressWarnings("unchecked")
+		Map<String,Object> request = (Map<String,Object>)ac.get("request");
+		
+		request.put("test",user.getUsername());
+		request.put("password",user.getPassword());
+		
+		
+		
+		
 		
 			
 		}
