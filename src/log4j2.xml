@@ -8,6 +8,10 @@
     <Loggers>
         <Logger name="com.opensymphony.xwork2" level="error"/>
         <Logger name="org.apache.struts2" level="error"/>
+        <Logger name="java.sql.Statement" level="error"/>
+        <Logger name="java.sql.Connection"  level="error"/>
+        <Logger name="java.sql.PreparedStatement" level="error"/>
+       
         <Root level="warn">
             <AppenderRef ref="STDOUT"/>
         </Root>
