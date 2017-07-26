@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<h1><strong style="color:aqua">session对象中的密码:<s:property value="#session.user.password"/></strong></h1>
 	<h1 style="color:greenyellow">action中的user对象用户名:<s:property value="user.username"/></h1>
 	<h1 style="color:greenyellow">action中的user对象密 码:<s:property value="user.username"/></h1>
-	<h1 style="color:gold">request对象中的user对象用用户名:<s:property value="#request.test"/></h1>
-	<h1 style="color:gold">request对象中的user对象密 码:<s:property value="#request.password"/></h1>
+	<h1 style="color:gold">request对象中的user对象用用户名:<s:property value="#request.user.username"/></h1>
+	<h1 style="color:gold">request对象中的user对象密 码:<s:property value="#request.user.password"/></h1>
 </body>
 </html>
