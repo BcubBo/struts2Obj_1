@@ -8,7 +8,7 @@
 <title>添加失败</title>
 
 </head>
-<body style="background-image:url('<%=path%>/image/19.jpg');
+<body style="background-image:url('/struts2Obj_1/image/19.jpg');
 	background-repeat: true;width:auto;height:auto;">
 	<h1><strong style='color:purple;'>动态调用方法，add失败页面</strong></h1>
 </body>

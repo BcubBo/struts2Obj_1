@@ -15,16 +15,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>成功界面</title>
 </head>
-<body style="background-image:url('<%=basePath%>/image/5.gif');
+<body style="background-image:url('/struts2Obj_1/image/5.gif');
 	background-repeat: true;width:auto;height:auto;">
-	<h1>登陆成功</h1>
-	<h1>用户:${sessionScope.user.username }</h1>
-	<h1>密码:${sessionScope.user.password }</h1>
-	<h1><strong><s:actionmessage/></strong></h1>
-	<h2><strong>struts标签显示</strong></h2>
-	<h1><strong>用户:<s:property value="#session.user.username"/></strong></h1>
-	<h1><strong>密码:<s:property value="#session.user.password"/></strong></h1>
-	<h1>action中的user对象用户名:<s:property value="user.username"/></h1>
-	<h1>action中的user对象密 码:<s:property value="user.username"/></h1>
+	<h1 style="color:greenyellow">登陆成功</h1>
+	<h1 style="color:greenyellow">用户:${sessionScope.user.username }</h1>
+	<h1 style="color:greenyellow">密码:${sessionScope.user.password }</h1>
+	<h1 style="color:greenyellow"><strong style="color:greenyellow"><s:actionmessage/></strong></h1>
+	<h2 style="color:greenyellow"><strong style="color:greenyellow">struts标签显示</strong></h2>
+	<h1 style="color:greenyellow"><strong style="color:greenyellow">用户:<s:property value="#session.user.username"/></strong></h1>
+	<h1 style="color:greenyellow"><strong style="color:greenyellow">密码:<s:property value="#session.user.password"/></strong></h1>
+	<h1 style="color:greenyellow">action中的user对象用户名:<s:property value="user.username"/></h1>
+	<h1 style="color:greenyellow">action中的user对象密 码:<s:property value="user.username"/></h1>
 </body>
 </html>

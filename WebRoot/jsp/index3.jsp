@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Struts2 Demo</title>
 </head>
-<body style="background-image:url('<%=path%>/image/3.gif');
+<body style="background-image:url('/struts2Obj_1/image/3.gif');
 	background-repeat: true;width:auto;height:auto;">
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>INDEX3.JSP</strong></h1>

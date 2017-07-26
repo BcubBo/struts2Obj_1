@@ -10,7 +10,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>INDEX1PAGE!</title>
 </head>
-<body style="background-image:url('<%=path%>/image/1.gif');
+<body style="background-image:url('/struts2Obj_1/image/8.gif');
 	background-repeat: true;width:auto;height:auto;">
 	<h1 style="background-color: greenyellow"><strong>INDEX 1 PAGE !</strong></h1>
 

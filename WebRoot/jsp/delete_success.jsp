@@ -7,7 +7,8 @@
 <title>删除方法</title>
 
 </head>
-<body>
+<body style="background-image:url('/struts2Obj_1/image/13.gif');
+	background-repeat: true;width:auto;height:auto;">
 	<h1><strong style='color:blue;'>动态调用方法，delete成功页面</strong></h1>
 </body>
 </html>
