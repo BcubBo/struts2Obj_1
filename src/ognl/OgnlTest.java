@@ -49,25 +49,13 @@ public class OgnlTest {
 			userList.add(users[i]);
 
 		}
-		for(User u:userList) {
-			
-			System.out.println(u.getUsername()+"\t\t"+u.getPassword()+"\t\t"+u.getEmail());
-			
-			
-		}
-		User[] userObject = {u1,u2,u3,u4,u5,u6};
-		for(User u:userObject) {
-			
-			System.out.println("user对象方式输出");
-			System.out.println(u.getUsername()+"\t\t"+u.getPassword()+"\t\t"+u.getEmail());
-			
-			
-		}
+
 		
 		House house = new House();
 		house.setTitle("第一间房子");
 		house.setUser(u1);
 		house.setStreet(new Street(1,"第一条街",new District(1,"第一个区")));
+		System.out.println("使用java普通方式输出内容:"+house.getStreet().getDistrict().getDistrictName());
 		
 		
 		

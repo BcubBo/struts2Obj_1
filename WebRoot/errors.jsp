@@ -6,8 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ERROR!</title>
 </head>
-<body>
-	<div style="background-color: yellowgreen"><strong style="background-color: yellowgreen;font-size:60px">ERROR!</strong></div>
+<body style="background-image:url('/struts2Obj_1/image/7.gif');
+	background-repeat: true;width:auto;height:auto;">
+	<div >
+	<strong style="background-color: yellowgreen;font-size:60px">ERROR!</strong></div>
 
 </body>
 </html>
