@@ -6,9 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ERROR_1!</title>
 </head>
-<body>
-	<h1 style="background-image:url('/struts2Obj_1/image/7.gif');
-	background-repeat: true;width:auto;height:auto;"><strong style="">ERROR_1!</strong></h1>
+<body style="background-image:url('/struts2Obj_1/image/7.gif');
+	background-repeat: true;width:auto;height:auto;">
+	<h1 ><strong style="">ERROR_1!</strong></h1>
 
 </body>
 </html>
