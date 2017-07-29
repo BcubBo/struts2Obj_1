@@ -67,6 +67,13 @@ public class OgnlTest {
 		house2.setUser(u3);
 		house2.setStreet(new Street(3,"第三条街",new District(3,"第三个区")));
 		House[] houses = new House[] {house,house1,house2};
+		for(int i = 0;i<110;i++) {
+			System.out.print("-");
+			if(i==109) {
+				
+				System.out.println();
+			}
+		}
 		for(House h:houses) {
 		System.out.println("使用java普通方式输出内容>>>>>>>>>>"
 				+
@@ -90,7 +97,13 @@ public class OgnlTest {
 		}
 		
 		
-		
+		for(int i = 0;i<110;i++) {
+			System.out.print("-");
+			if(i==109) {
+				
+				System.out.println();
+			}
+		}
 		
 		
 		Object[] root = new Object[]{house,house1,house2};
@@ -110,7 +123,13 @@ public class OgnlTest {
 		} catch (OgnlException e) {
 			e.printStackTrace();
 		}
-		
+		for(int i = 0;i<110;i++) {
+			System.out.print("-");
+			if(i==109) {
+				
+				System.out.println();
+			}
+		}
 		//////////////////
 		
 		Map<String,Object> context = new HashMap<String,Object>();
@@ -139,9 +158,9 @@ public class OgnlTest {
 			
 			
 		}//for最外层,OGNL访问Map使用部分方式访问
-		for(int i = 0;i<130;i++) {
-			System.out.print("=");
-			if(i==129) {
+		for(int i = 0;i<110;i++) {
+			System.out.print("-");
+			if(i==109) {
 				
 				System.out.println();
 			}
