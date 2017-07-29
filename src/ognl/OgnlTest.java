@@ -185,7 +185,7 @@ public class OgnlTest {
 				
 			
 			
-		}//for最外层，OGNL访问Map使用全部限定语句进行访问
+		}//for最外层，OGNL访问Map使用全部限定语句进行访问s
 		
 		
 		
