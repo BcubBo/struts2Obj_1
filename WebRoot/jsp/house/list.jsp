@@ -55,7 +55,7 @@
 		地区：${requestScope.houses[2].district.districtName }<br/>
 	</strong>
 	</div>
-	<span style="color:darkblue;font-size:18px;"><s:url var="actionUrl" namespace="/house" action="op_list">
+	<span style="color:darkblue;font-size:18px;"><s:url var="url" namespace="/house" action="op_list">
 		
 		<s:param name="type">12</s:param>
 		<s:param name="page">32</s:param>
@@ -64,7 +64,7 @@
 	
 	</s:url>
 	
-		<s:a href="%{actionUrl}">查看</s:a>
+		<s:a href="%{url}">查看</s:a>
 	</span>
 	
 	
