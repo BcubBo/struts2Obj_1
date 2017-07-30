@@ -31,6 +31,28 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	<h1 style="color:yellowgreen">attr全局搜索结果查找user.username:<s:property value="#attr.user.username"/></h1>
 	<h1 style="color:yellowgreen">attr全局搜索结果查找user.password:<s:property value="#attr.user.password"/></h1>
+	
+	
+	
+	<h3><strong><s:property value="#request.user.username" escapeHtml="true"/></strong></h3>
+	<h3><strong style="color:gold"><s:property value="'<hr>'" escapeHtml="true"/></strong></h3>
+	<h3>
+		<strong style="color:gold">
+			<s:set var="defineDate" value="date"/>
+			<s:date name="defineDate" format="yyyy-MM-dd-HH:mm:ss"  />
+<%-- 			<s:property value="defineDate"/> --%>
+		</strong>
+	</h3>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<strong><s:debug/></strong>
 </body>
 </html>

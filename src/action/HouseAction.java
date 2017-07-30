@@ -81,6 +81,33 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 	}
 	
+	////
+	public String add() {
+		
+		
+		return SUCCESS;
+		
+		
+		
+	}
+	
+	////
+	public String list() {
+		
+		
+		return SUCCESS;
+		
+		
+	}
+	////
+	
+	public String view() {
+		
+		
+		return SUCCESS;
+		
+		
+	}
 	
 	
 	

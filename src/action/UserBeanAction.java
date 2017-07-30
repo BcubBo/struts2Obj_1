@@ -1,5 +1,6 @@
 package action;
 
+import java.util.Date;
 import java.util.Map;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -10,6 +11,14 @@ import po.User;
 public class UserBeanAction extends ActionSupport {
 	
 	private User user;
+	private Date date;
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
 
 	public User getUser() {
 		return user;
@@ -51,8 +60,7 @@ public class UserBeanAction extends ActionSupport {
 		
 		request.put("user",user);
 		
-		
-		
+		date = new Date();
 		
 		
 			
