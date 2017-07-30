@@ -1,13 +1,15 @@
 /*package po;
-import po.TestMain;
+
 public class Main {
+	public static int times = 0;
 
 	public static void main(String[]args) {
-		
-		String[] args2 = {"你好","小伙子"};
-		TestMain.main(args2);
-		
+		times+=1;
+		System.out.println(times);
+		main(null);
 		
 	}
+		
+
 }
 */

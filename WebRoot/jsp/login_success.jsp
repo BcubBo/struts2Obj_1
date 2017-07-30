@@ -20,13 +20,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<h1 style="color:greenyellow">登陆成功</h1>
 	<h1 style="color:greenyellow">用户:${sessionScope.user.username }</h1>
 	<h1 style="color:greenyellow">密码:${sessionScope.user.password }</h1>
-	<h1 style="color:greenyellow"><strong style="color:greenyellow"><s:actionmessage/></strong></h1>
+<%-- 	<h1 style="color:greenyellow"><strong style="color:greenyellow"><s:actionmessage/></strong></h1>
 	<h2 style="color:greenyellow"><strong style="color:greenyellow">struts标签显示</strong></h2>
 	<h1><strong style="color:aqua">session对象中的用户:<s:property value="#session.user.username"/></strong></h1>
 	<h1><strong style="color:aqua">session对象中的密码:<s:property value="#session.user.password"/></strong></h1>
 	<h1 style="color:greenyellow">action中的user对象用户名:<s:property value="user.username"/></h1>
 	<h1 style="color:greenyellow">action中的user对象密 码:<s:property value="user.username"/></h1>
 	<h1 style="color:gold">request对象中的user对象用用户名:<s:property value="#request.user.username"/></h1>
-	<h1 style="color:gold">request对象中的user对象密 码:<s:property value="#request.user.password"/></h1>
+	<h1 style="color:gold">request对象中的user对象密 码:<s:property value="#request.user.password"/></h1> --%>
+	
+	<h1 style="color:yellowgreen">attr全局搜索结果查找user.username:<s:property value="#attr.user.username"/></h1>
+	<h1 style="color:yellowgreen">attr全局搜索结果查找user.password:<s:property value="#attr.user.password"/></h1>
+	<strong><s:debug/></strong>
 </body>
 </html>
