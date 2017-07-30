@@ -8,33 +8,14 @@
     
 	<package name="user" namespace="/user" extends="default">
 		
-<!-- 		<action name="login" class="action.Login">
-		
-			<result name="success">/jsp/login_success.jsp</result>
-			<result name="input">/jsp/login.jsp</result>
-		
-		
-		</action> -->
 		<action name="login" class="action.UserBeanAction" >
 		
-<!-- 			<result name="success" type="redirect">/jsp/login_success.jsp</result> -->
 			<result name="success" >/jsp/login_success.jsp</result>
-<!-- redirect标签 ，可设置location属性进行访问外网的操作-->
-<!-- 			<result name="success" type="chain">add</result> -->
-<!-- chain链式调用标签 -->
-<!-- 			<result name="success" type="redirectAction">
-			
-				<param name="actionName">add</param>
-				<param name="namespace">/user</param>
-			要指定namespace位置，防止404
-			</result> -->
-<!-- redirectAction重定向action标签 -->
 			<result name="input">/jsp/login.jsp</result>
 			
 			
 			
 			<result name="error">/errors1.jsp</result>
-<!-- 局部错误的编写，从最内层向外查找 -->
 		
 		</action>
 		

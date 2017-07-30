@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Conifguration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd" >
 <struts>
-	    <package name="jsp" namespace="/jsp/erro/jsp/success" extends="struts-default">
-    <!-- namespace的作用就是和项目中的包进行匹配 result结果中要用完全路径 -->
+	  <package name="jsp" namespace="/jsp/erro/jsp/success" extends="struts-default">
     	<action name="index">
     		<result>/jsp/index2.jsp</result>
     	</action>
