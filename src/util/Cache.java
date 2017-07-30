@@ -56,18 +56,21 @@ public class Cache {
 			house.setStreet(new Street(1,"第一条街",new District(1,"第一个区")));
 			house.setPrice(1000);
 			house.setAddDate(new Date());
+			house.setDistrict(house.getStreet().getDistrict());
 		//
 			house1.setTitle("第二间房子");
 			house1.setUser(u2);
 			house1.setStreet(new Street(2,"第二条街",new District(2,"第二个区")));
 			house1.setPrice(2000);
 			house1.setAddDate(new Date());
+			house1.setDistrict(house1.getStreet().getDistrict());
 		//
 			house2.setTitle("第三间房子");
 			house2.setUser(u3);
 			house2.setStreet(new Street(3,"第三条街",new District(3,"第三个区")));
 			house2.setPrice(3000);
 			house2.setAddDate(new Date());
+			house2.setDistrict(house2.getStreet().getDistrict());
 			
 		
 		
@@ -95,6 +98,7 @@ public class Cache {
 			district = house.getDistrict();
 			district1= house1.getDistrict();
 			district2 = house2.getDistrict();
+			//此处的获取District的方法是再street中定义的，而没有再house中设置street
 		
 		
 		districts = Arrays.asList(district,district1,district2);
@@ -102,16 +106,24 @@ public class Cache {
 		
 		areas = new HashMap<Integer,List<Street>>();
 		
-		areas.put(district.getDistrictId(), null);
+
 		
 		Iterator<Street> st = streets.iterator();
+		List<Street> streetList = new ArrayList<Street>();
 		
 		while(st.hasNext()) {
+			Street srt = st.next();
 			
 			
-			
-			
-			
+			if(srt.getDistrict().getDistrictId()==1) {
+				
+				
+				
+				streetList.add(srt);
+				
+				
+			}
+			areas.put(district.getDistrictId(),streetList);
 		}
 		
 		
