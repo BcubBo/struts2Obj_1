@@ -6,6 +6,8 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.interceptor.ApplicationAware;
 import org.apache.struts2.interceptor.RequestAware;
@@ -32,6 +34,8 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	
 	
 	private Map<String,Object> application;
+	
+	private Logger logger  = (Logger)LogManager.getLogger();
 
 	@Override
 	public String execute() throws Exception {
@@ -101,6 +105,8 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 		this.houses = Cache.houses;
 		System.out.println("HouseAction中\t"+Cache.houses.size());
+		logger.debug("房屋的长度\t"+houses.size());
+		
 		return "list";
 		
 		

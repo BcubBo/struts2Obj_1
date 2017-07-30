@@ -28,7 +28,7 @@
     	
     	</action>
     </package>
-
+	
 
      
 	<include file="struts_user_package.xml"></include>
