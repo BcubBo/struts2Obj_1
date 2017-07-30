@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>成功界面</title>
 </head>
-<body style="background-image:url('/struts2Obj_1/image/5.gif');
+<body style="background-image:url('/struts2Obj_1/image/19.jpg');
 	background-repeat: true;width:auto;height:auto;">
 	<h1 style="color:greenyellow">登陆成功</h1>
 	<h1 style="color:greenyellow">用户:${sessionScope.user.username }</h1>
@@ -34,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	
 	
-	<h3><strong><s:property value="#request.user.username" escapeHtml="true"/></strong></h3>
+	<h3><strong style="color:gold"><s:property value="#request.user.username" escapeHtml="true"/></strong></h3>
 	<h3><strong style="color:gold"><s:property value="'<hr>'" escapeHtml="true"/></strong></h3>
 	<h3>
 		<strong style="color:gold">

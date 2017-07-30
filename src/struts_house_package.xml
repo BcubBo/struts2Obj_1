@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Conifguration 2.3//EN" 
+"http://struts.apache.org/dtds/struts-2.3.dtd" >
+<struts>
+	
+
+	<package name="house" namespace="/house" extends = "default">
+	
+		<action name="op_*" class="action.HouseAction" method="{1}">
+		
+			<result name="{1}_success">/jsp/house/{1}_success.jsp</result>
+			<result name="{1}">/jsp/house/{1}.jsp</result>
+		
+		
+		</action>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</package>
+
+
+
+
+</struts>

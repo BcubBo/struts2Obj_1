@@ -37,6 +37,7 @@
 	<!-- namespace=action1 -->
 	<include file="struts_jsp_package.xml"></include>
 	<!-- namespace=jsp -->
-
+	<include file="struts_house_package.xml"></include>
+	<!-- namespace=house -->
 
 </struts>

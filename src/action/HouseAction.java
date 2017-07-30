@@ -1,5 +1,7 @@
 package action;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,6 +14,8 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import po.House;
+import util.Cache;
 public class HouseAction extends ActionSupport implements RequestAware,SessionAware,ApplicationAware,ServletRequestAware {
 
 	/**
@@ -22,6 +26,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	private Map<String,Object> request;
 	//页面不使用此值
 	//故不需要设置setter和getter
+	private List<House> houses = new ArrayList<House>();
 	
 	private Map<String,Object> session;
 	
@@ -85,7 +90,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	public String add() {
 		
 		
-		return SUCCESS;
+		return "add_success";
 		
 		
 		
@@ -94,8 +99,9 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	////
 	public String list() {
 		
-		
-		return SUCCESS;
+		this.houses = Cache.houses;
+		System.out.println("HouseAction中\t"+Cache.houses.size());
+		return "list";
 		
 		
 	}
@@ -104,11 +110,31 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	public String view() {
 		
 		
-		return SUCCESS;
+		return "view_success";
 		
 		
 	}
-	
+	public String update() {
+		
+		
+		return "update_success";
+	}
+	////
+	public String delete() {
+		
+		return "delete_success";
+		
+		
+		
+	}
+
+	public List<House> getHouses() {
+		return houses;
+	}
+
+	public void setHouses(List<House> houses) {
+		this.houses = houses;
+	}
 	
 	
 

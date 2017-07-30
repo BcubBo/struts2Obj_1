@@ -47,10 +47,13 @@ public class Cache {
 		};
 	
 		
-		House house,house1,house2 = null;
+		House house,house1,house2,house3,house4,house5 = null;
 			house = new House();
 			house1 = new House();
 			house2 = new House();
+			house3 = new House();
+			house4 = new House();
+			house5 = new House();
 			house.setTitle("第一间房子");
 			house.setUser(u1);
 			house.setStreet(new Street(1,"第一条街",new District(1,"第一个区")));
@@ -72,7 +75,27 @@ public class Cache {
 			house2.setAddDate(new Date());
 			house2.setDistrict(house2.getStreet().getDistrict());
 			
-		
+		//
+			house3.setTitle("第四间房子");
+			house3.setUser(u4);
+			house3.setStreet(new Street(4,"第四条街",new District(1,"第一个区")));
+			house3.setPrice(4000);
+			house3.setAddDate(new Date());
+			house3.setDistrict(house2.getStreet().getDistrict());
+		//
+			house4.setTitle("第五间房子");
+			house4.setUser(u5);
+			house4.setStreet(new Street(5,"第五条街",new District(2,"第一个区")));
+			house4.setPrice(5000);
+			house4.setAddDate(new Date());
+			house4.setDistrict(house2.getStreet().getDistrict());
+		//
+			house5.setTitle("第六间房子");
+			house5.setUser(u6);
+			house5.setStreet(new Street(6,"第六条街",new District(3,"第一个区")));
+			house5.setPrice(6000);
+			house5.setAddDate(new Date());
+			house5.setDistrict(house2.getStreet().getDistrict());
 		
 		HouseType  houseType,houseType1,houseType2 = null;
 		
@@ -80,19 +103,21 @@ public class Cache {
 			houseType1 = new HouseType(2,"二居");
 			houseType2 = new HouseType(3,"三居");
 		
-		Street street,street1,street2 = null;
+		Street street,street1,street2,street3,street4,street5= null;
 		
-			street = house.getStreet();
-			street1 = house1.getStreet();
-			street2 = house2.getStreet();
-		
+			street = 	house.getStreet();
+			street1 = 	house1.getStreet();
+			street2 = 	house2.getStreet();
+			street3 = 	house3.getStreet();
+			street4 = 	house4.getStreet();
+			street5 = 	house5.getStreet();
 		users = Arrays.asList(u1,u2,u3,u4,u5,u6);
 		
-		houses = Arrays.asList(house,house1,house2);
+		houses = Arrays.asList(house,house1,house2,house3,house4,house5);
 		
 		houseTypes = Arrays.asList(houseType,houseType1,houseType2);
 		
-		streets = Arrays.asList(street,street1,street2);
+		streets = Arrays.asList(street,street1,street2,street3,street4,street5);
 		
 		District district,district1,district2 = null;
 			district = house.getDistrict();
@@ -108,9 +133,12 @@ public class Cache {
 		
 
 		
-		Iterator<Street> st = streets.iterator();
-		List<Street> streetList = new ArrayList<Street>();
-		
+		Iterator<Street> st = null;
+		List<Street> streetList1 = new ArrayList<Street>();
+		List<Street> streetList2 = new ArrayList<Street>();
+		List<Street> streetList3 = new ArrayList<Street>();
+		st = streets.iterator();
+		//
 		while(st.hasNext()) {
 			Street srt = st.next();
 			
@@ -119,13 +147,44 @@ public class Cache {
 				
 				
 				
-				streetList.add(srt);
+				streetList1.add(srt);
 				
 				
 			}
-			areas.put(district.getDistrictId(),streetList);
+			areas.put(district.getDistrictId(),streetList1);
 		}
-		
+		st = streets.iterator();
+		//
+		while(st.hasNext()) {
+			Street srt = st.next();
+			
+			
+			if(srt.getDistrict().getDistrictId()==2) {
+				
+				
+				
+				streetList2.add(srt);
+				
+				
+			}
+			areas.put(district1.getDistrictId(),streetList2);
+		}
+		st = streets.iterator();
+		//
+		while(st.hasNext()) {
+			Street srt = st.next();
+			
+			
+			if(srt.getDistrict().getDistrictId()==3) {
+				
+				
+				
+				streetList3.add(srt);
+				
+				
+			}
+			areas.put(district2.getDistrictId(),streetList3);
+		}
 		
 	}
 	
