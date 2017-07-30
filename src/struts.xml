@@ -28,10 +28,7 @@
     	</action>
     </package>
 	
-<!-- 	<include file="struts_user_package.xml"></include>
-	<include file="struts_act_package.xml"></include>
-	<include file="struts_jsp_package.xml"></include>
-	<include file="struts_house_package.xml"></include> -->
+
 	<package name="house" namespace="/house" extends = "struts-default">
 	
 		<action name="op_*" class="action.HouseAction" method="{1}">
