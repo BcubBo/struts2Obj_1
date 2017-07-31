@@ -107,6 +107,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		System.out.println("HouseAction中\t"+Cache.houses.size());
 		logger.debug("房屋的长度\t"+houses.size());
 		
+		
 		return "list";
 		
 		

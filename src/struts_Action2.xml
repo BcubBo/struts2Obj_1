@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Conifguration 2.3//EN" "http://struts.apache.org/dtds/struts-2.3.dtd" >
+<struts>
+	<package name="user" namespace="/user" extends="struts-default">
+		
+		<action name="login" class="action.UserBeanAction" >
+		
+			<result name="success" >/jsp/login_success.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+			
+			
+			
+			<result name="error">/errors1.jsp</result>
+		
+		</action>
+		
+		<action name="model" class="action.ModelDrivenBeanAction">
+			<result name="success">/jsp/modeldriven.jsp</result>	
+		
+			<result name="input">/jsp/login.jsp</result>
+		
+		
+		
+		
+		</action>
+		<action name="add" class="action.UserBeanAction"  method="add">
+		
+			<result name="add_success">/jsp/add_success.jsp</result>
+			<result name="failed">/jsp/add_failed.jsp</result>
+		
+		</action>
+		<!-- 动态方法是用Demo -->
+		<action name="op" class="action.UserBeanAction">
+		
+			<result name="success">/jsp/login_success.jsp</result>
+			<result name="input">/jsp/login.jsp</result>
+			<result name="add_success">/jsp/add_success.jsp</result>
+			<result name="delete_success">/jsp/delete_success.jsp</result>		
+			<result name="update_success">/jsp/update_success.jsp</result>	
+			<result name="add_failed">/jsp/add_failed.jsp</result>	
+		</action>
+	
+		<action name="user*" class="action.UserBeanAction" method="{1}">
+		
+			<result name="{1}_success">/jsp/{1}_success.jsp</result>
+		</action>
+		
+	
+	</package>
+
+
+
+</struts>
