@@ -14,6 +14,7 @@ import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import po.House;
@@ -105,8 +106,8 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 		this.houses = Cache.houses;
 		System.out.println("HouseAction中\t"+Cache.houses.size());
+		ActionContext ac = ActionContext.getContext();
 		logger.debug("房屋的长度\t"+houses.size());
-		
 		
 		return "list";
 		

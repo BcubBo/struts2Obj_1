@@ -42,7 +42,7 @@
 		<s:property value="houses[1].street.district.districtName"/>
 	</strong>
 
-	<s:debug/>
+<%-- 	<s:debug/> --%>
 	
 	
 	<div style="color:greenyellow;font-size:18px;">
@@ -57,15 +57,12 @@
 	</div>
 	<span style="color:darkblue;font-size:18px;"><s:url var="url" namespace="/house" action="op_list">
 		
-		<s:param name="type">12</s:param>
-		<s:param name="page">32</s:param>
+		<s:param name="type" value="'12'"></s:param>
+		<s:param name="page" value="'32'"></s:param>
 
 	</s:url>
 	
 		<s:a href="%{url}">查看</s:a>
 	</span>
-	
-	
-
 </body>
 </html>

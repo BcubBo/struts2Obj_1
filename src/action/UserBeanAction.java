@@ -57,6 +57,7 @@ public class UserBeanAction extends ActionSupport {
 		
 		@SuppressWarnings("unchecked")
 		Map<String,Object> request = (Map<String,Object>)ac.get("request");
+		////
 		
 		request.put("user",user);
 		
