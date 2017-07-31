@@ -41,8 +41,8 @@
 	<strong style="color:gold;font-size:20px;">地区：
 		<s:property value="houses[1].street.district.districtName"/>
 	</strong>
-<%-- 
-	<s:debug/> --%>
+
+	<s:debug/>
 	
 	
 	<div style="color:greenyellow;font-size:18px;">
@@ -59,9 +59,7 @@
 		
 		<s:param name="type">12</s:param>
 		<s:param name="page">32</s:param>
-	
-	
-	
+
 	</s:url>
 	
 		<s:a href="%{url}">查看</s:a>

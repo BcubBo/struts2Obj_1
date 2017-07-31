@@ -27,10 +27,9 @@
     	
     	</action>
     </package>
-
 	<include file="struts_Action.xml"></include>
-	<include file="struts_Action2.xml"></include>
 	<include file="struts_Action1.xml"></include>
+	<include file="struts_Action2.xml"></include>
 	<include file="struts_Action3.xml"></include>
 
 
