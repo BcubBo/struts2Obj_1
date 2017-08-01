@@ -17,5 +17,11 @@
 	<h3><strong style="color:orange;">街道：<s:property value="house.street.streetName"/></strong></h3>
 	<h3><strong style="color:orange;">地区：<s:property value="house.district.districtName"/></strong></h3>
 <%-- 	<s:debug/> --%>
+	<s:include value="/jsp/house/copyright.jsp">
+		<s:param name="t">1</s:param>
+	
+	
+	</s:include>
+
 </body>
 </html>

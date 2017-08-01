@@ -10,64 +10,66 @@
 <body  style="background-image:url('/struts2Obj_1/image/19.jpg');background-repeat: repeat;">
 	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong style="color:gold;font-size:20px;">房屋信息</strong></h1>
-	<strong style="color:gold;font-size:20px;">标号：
-		<s:property value="houses[0].id"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">标题：
-		<s:property value="houses[0].title"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">用户：
-		<s:property value="houses[0].user.username"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">街道：
-		<s:property value="houses[0].street.streetName"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">地区：
-		<s:property value="houses[0].street.district.districtName"/>
-	</strong>
-	<br/>
-	<h1><strong style="color:gold;font-size:20px;">房屋信息</strong></h1>
-	<strong style="color:gold;font-size:20px;">标号：
-		<s:property value="houses[1].id"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">标题：
-		<s:property value="houses[1].title"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">用户：
-		<s:property value="houses[1].user.username"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">街道：
-		<s:property value="houses[1].street.streetName"/>
-	</strong>
-	<br/>
-	<strong style="color:gold;font-size:20px;">地区：
-		<s:property value="houses[1].street.district.districtName"/>
-	</strong>
+
+	
+
 
 <%-- 	<s:debug/> --%>
 	
+	<table>
 	
-	<div style="color:greenyellow;font-size:18px;">
-	<h1>使用EL表达式</h1>
-	<strong>
-		标号：${requestScope.houses[2].id }<br/>
-		标题：${requestScope.houses[2].title }<br/>
-		用户：${requestScope.houses[2].user.username }<br/>
-		街道：${requestScope.houses[2].street.streetName }<br/>
-		地区：${requestScope.houses[2].district.districtName }<br/>
-	</strong>
-	</div>
+		<tr>
+		
+			<td>编号：</td>
+			<td>标题：</td>
+			<td>用户：</td>
+			<td>时间：</td>
+			<td>街道：</td>
+			<td>地区：</td>
+			
+		
+		
+		</tr>
+		<s:iterator var="house"	value="houses" status="st">
+		<tr>
+			<td>
+			<strong style="color:gold;font-size:20px;">
+				<s:property value="house.id"/>
+			</strong>
+			</td>
+			<td>
+			<strong style="color:gold;font-size:20px;">
+				<s:property value="house.title"/>
+			</strong>
+			</td>
+			<td>
+			<strong style="color:gold;font-size:20px;">：
+				<s:property value="house.user.username"/>
+			</strong>
+			<td/>
+			<td>
+			<strong style="color:gold;font-size:20px;">
+				<s:date name="house.addDate" format="yyyy-MM-dd-HH:mm:ss"/>
+			</strong>
+			</td>
+			<td>
+			<strong style="color:gold;font-size:20px;">
+				<s:property value="house.street.streetName"/>
+			</strong>			
+			</td>
+			<td>
+			<strong style="color:gold;font-size:20px;">
+				<s:property value="house.district.districtName"/>
+			</strong>			
+			</td>
+		</tr>
+		</s:iterator>
+	
+	</table>
+
 	<span style="color:darkblue;font-size:18px;"><s:url var="url" namespace="/house" action="op_view">
 		
 		<s:param name="id" >1001</s:param>
-		<s:param name="page" value="'32'"></s:param>
 
 	</s:url>
 	
