@@ -11,10 +11,10 @@
 	td{
 		
 		 border: 1px green solid;
-		 background-color: darkblue;
 		 text-align: center;
 	
 	}
+
 	
 	strong{
 	
@@ -34,15 +34,22 @@
 	
 	
 	}
+	
+	body{
+	
+		background-image:url('/struts2Obj_1/image/19.jpg');
+		background-repeat: repeat;
+		
+		
+}
+	
+	
+	
 
 </style>
 </head>
-<body  style="background-image:url('/struts2Obj_1/image/19.jpg');background-repeat: repeat;">
-	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
+<body  >
 	<h1><strong >房屋信息</strong></h1>
-
-	
-
 
 	<s:debug/>
 	
@@ -59,7 +66,14 @@
 
 		</tr>
 		<s:iterator var="h"	value="houses" status="st">
-		<tr style="">
+		
+		<tr 
+			<s:if test="(#st.index)%2==1">
+				 background-color="aqua"
+			</s:if>
+		
+		
+		>
 			<td>
 			<strong>
 				<s:property value="#h.id"/>

@@ -11,7 +11,7 @@
 	td{
 		
 		 border: 1px green solid;
-		 background-color: darkblue;
+		 background-color: buttonshadow;
 		 text-align: center;
 	
 	}
@@ -28,19 +28,18 @@
 		
 		align:center; 
 		border:3px black solid;
-		width:1000px;
-		height:500px;
+		width:auto;
+		height:auto;
 	
 	
 	
 	}
+	body{background-color: yellowgreen;}
 
 </style>
 </head>
-<body style="background-color: darkgreen;">	
-	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
-
-
+<body >	
+<div>
 	<table >
 	
 		<tr>
@@ -89,6 +88,7 @@
 
 	
 	</table>	
+</div>
 <%-- 	<s:debug/> --%>
 	<s:include value="/jsp/house/copyright.jsp">
 		<s:param name="t">1</s:param>
