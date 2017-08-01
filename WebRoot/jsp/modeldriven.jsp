@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>成功界面</title>
 </head>
 <body style="background-image:url('<%=basePath%>/image/10.gif');
-	background-repeat: true;width:auto;height:auto;">
+	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
 	<h1>ModelDriven页面</h1>
 	
 

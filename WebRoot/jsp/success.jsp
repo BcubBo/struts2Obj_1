@@ -15,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>成功界面</title>
 </head>
 <body style="background-image:url('<%=basePath%>/image/11.gif');
-	background-repeat: true;width:auto;height:auto;">
+	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
 	<h1>默认执行父类execute方法成功界面</h1>
 	<h1><strong><s:actionmessage/></strong></h1>
 	

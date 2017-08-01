@@ -8,7 +8,8 @@
 <title>添加失败</title>
 
 </head>
-<body style="background-image:url('/struts2Obj_1/image/19.jpg');background-repeat: true;width:auto;height:auto;">
+<body style="background-image:url('/struts2Obj_1/image/19.jpg');
+	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
 	<h1><strong style='color:purple;'>局部异常页面</strong></h1>
 </body>
 </html>

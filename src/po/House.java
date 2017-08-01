@@ -4,7 +4,13 @@ import java.util.Date;
 
 public class House {
 	
-	
+	private Integer id;
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
 	private String title;//信息标题
 	private Date  addDate;//信息发布时间
 	private HouseType houseType;//房屋类型

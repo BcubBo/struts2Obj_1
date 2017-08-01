@@ -54,6 +54,7 @@ public class Cache {
 			house3 = new House();
 			house4 = new House();
 			house5 = new House();
+			house.setId(1000);
 			house.setTitle("第一间房子");
 			house.setUser(u1);
 			house.setStreet(new Street(1,"第一条街",new District(1,"第一个区")));
@@ -61,13 +62,15 @@ public class Cache {
 			house.setAddDate(new Date());
 			house.setDistrict(house.getStreet().getDistrict());
 		//
+			house1.setId(1001);
 			house1.setTitle("第二间房子");
 			house1.setUser(u2);
 			house1.setStreet(new Street(2,"第二条街",new District(2,"第二个区")));
 			house1.setPrice(2000);
 			house1.setAddDate(new Date());
 			house1.setDistrict(house1.getStreet().getDistrict());
-		//
+		//	
+			house2.setId(1002);
 			house2.setTitle("第三间房子");
 			house2.setUser(u3);
 			house2.setStreet(new Street(3,"第三条街",new District(3,"第三个区")));
@@ -75,21 +78,24 @@ public class Cache {
 			house2.setAddDate(new Date());
 			house2.setDistrict(house2.getStreet().getDistrict());
 			
-		//
+		//	
+			house3.setId(1003);
 			house3.setTitle("第四间房子");
 			house3.setUser(u4);
 			house3.setStreet(new Street(4,"第四条街",new District(1,"第一个区")));
 			house3.setPrice(4000);
 			house3.setAddDate(new Date());
 			house3.setDistrict(house2.getStreet().getDistrict());
-		//
+		//	
+			house4.setId(1004);
 			house4.setTitle("第五间房子");
 			house4.setUser(u5);
 			house4.setStreet(new Street(5,"第五条街",new District(2,"第一个区")));
 			house4.setPrice(5000);
 			house4.setAddDate(new Date());
 			house4.setDistrict(house2.getStreet().getDistrict());
-		//
+		//	
+			house5.setId(1005);
 			house5.setTitle("第六间房子");
 			house5.setUser(u6);
 			house5.setStreet(new Street(6,"第六条街",new District(3,"第一个区")));

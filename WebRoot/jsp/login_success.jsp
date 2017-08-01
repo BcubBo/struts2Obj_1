@@ -16,7 +16,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>成功界面</title>
 </head>
 <body style="background-image:url('/struts2Obj_1/image/19.jpg');
-	background-repeat: true;width:auto;height:auto;">
+	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
 	<h1 style="color:greenyellow">登陆成功</h1>
 	<h1 style="color:greenyellow">用户:${sessionScope.user.username }</h1>
 	<h1 style="color:greenyellow">密码:${sessionScope.user.password }</h1>

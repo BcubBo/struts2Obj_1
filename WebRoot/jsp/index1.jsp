@@ -11,7 +11,7 @@
 <title>INDEX1PAGE!</title>
 </head>
 <body style="background-image:url('/struts2Obj_1/image/8.gif');
-	background-repeat: true;width:auto;height:auto;">
+	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
 	<h1 style="background-color: greenyellow"><strong>INDEX 1 PAGE !</strong></h1>
 
 </body>

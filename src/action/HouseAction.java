@@ -24,6 +24,24 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	/**
 	 * 
 	 */
+	private House house;
+	public House getHouse() {
+		return house;
+	}
+
+	public void setHouse(House house) {
+		this.house = house;
+	}
+
+	private Integer id;
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	private static final long serialVersionUID = -1725638051474259449L;
 	
 	private Map<String,Object> request;
@@ -117,8 +135,22 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	
 	public String view() {
 		
-		
-		return "view_success";
+		for(House h:Cache.houses) {
+			
+			
+			if(h.getId()==id) {
+				
+				this.house = h;
+				break;
+				
+				
+				
+			}
+			
+			
+			
+		}
+		return "view";
 		
 		
 	}

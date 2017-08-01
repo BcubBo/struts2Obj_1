@@ -7,7 +7,7 @@
 <title>ERROR_1!</title>
 </head>
 <body style="background-image:url('/struts2Obj_1/image/7.gif');
-	background-repeat: true;width:auto;height:auto;">
+	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
 	<h1 ><strong style="">ERROR_1!</strong></h1>
 
 </body>

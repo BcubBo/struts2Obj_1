@@ -9,7 +9,7 @@
 <title>添加方法</title>
 </head>
 <body style="background-image:url('<%=path%>/image/16.gif');
-	background-repeat: true;width:1000px;height:1000px;">
+	background-repeat: true;width:1000px;height:1000px;background-color:darkgreen;">
 	<h1><strong style="color:gold">动态调用方法，add方法添加成功</strong></h1>
 	<h1 style="background-color: gold">取出user:<s:property value="user.username"/></h1>
 	<s:debug/>

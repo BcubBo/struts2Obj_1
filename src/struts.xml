@@ -8,9 +8,6 @@
     <constant name="struts.enable.DynamicMethodInvocation" value="true" />
     <constant name="struts.devMode" value="true" />
     <constant name="struts.cofiguration.xml.reload" value="true"></constant>
-
-
-
     <!-- Add packages here -->
     <package name="default" namespace="" extends="struts-default">
     	<global-results>
