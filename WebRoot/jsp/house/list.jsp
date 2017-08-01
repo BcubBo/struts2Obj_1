@@ -67,9 +67,12 @@
 		</tr>
 		<s:iterator var="h"	value="houses" status="st">
 		
-		<tr 
-			<s:if test="(#st.index)%2==1">
-				 background-color="aqua"
+		<tr
+			<s:if test="(#st.index)%2!=0">
+				bgcolor="greenyellow"
+			</s:if>
+			<s:if test="(#st.index)%2==0">
+				bgcolor="buttonface"
 			</s:if>
 		
 		

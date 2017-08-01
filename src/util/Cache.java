@@ -85,7 +85,7 @@ public class Cache {
 			house3.setStreet(new Street(4,"第四条街",new District(1,"第一个区")));
 			house3.setPrice(4000);
 			house3.setAddDate(new Date());
-			house3.setDistrict(house2.getStreet().getDistrict());
+			house3.setDistrict(house.getStreet().getDistrict());
 		//	
 			house4.setId(1004);
 			house4.setTitle("第五间房子");
@@ -93,7 +93,7 @@ public class Cache {
 			house4.setStreet(new Street(5,"第五条街",new District(2,"第一个区")));
 			house4.setPrice(5000);
 			house4.setAddDate(new Date());
-			house4.setDistrict(house2.getStreet().getDistrict());
+			house4.setDistrict(house1.getStreet().getDistrict());
 		//	
 			house5.setId(1005);
 			house5.setTitle("第六间房子");
