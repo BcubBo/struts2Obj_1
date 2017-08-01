@@ -11,6 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <title>Struts2 Demo</title>
 </head>
 <body style="background-color:darkgreen;">
+	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>登录界面</strong></h1>
 	用户登录:<br/>

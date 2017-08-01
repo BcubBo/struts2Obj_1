@@ -12,6 +12,7 @@
 </head>
 <body style="background-image:url('/struts2Obj_1/image/8.gif');
 	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
+	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1 style="background-color: greenyellow"><strong>INDEX 1 PAGE !</strong></h1>
 
 </body>

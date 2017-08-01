@@ -17,7 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body style="background-image:url('<%=basePath%>/image/10.gif');
 	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
 	<h1>ModelDriven页面</h1>
-	
+	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>	
 
 	<h2><strong>struts标签显示</strong></h2>
 	<h1><strong>用户:<s:property value="user.username"/></strong></h1>

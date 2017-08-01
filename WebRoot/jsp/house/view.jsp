@@ -8,13 +8,14 @@
 <title>VIEW页面</title>
 </head>
 <body style="background-color: darkgreen;">	
-
+	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong style="color:orange;">房屋信息</strong></h1>
 	<h3><strong style="color:orange;">编号：<s:property value="house.id"/></strong></h3>
 	<h3><strong style="color:orange;">标题：<s:property value="house.title"/></strong></h3>
-	<h3><strong style="color:orange;">用户：<s:property value="house.user.userName"/></strong></h3>	
-	<h3><strong style="color:orange;">时间：<s:property value="house.addDate"/></strong></h3>
+	<h3><strong style="color:orange;">用户：<s:property value="house.user.username"/></strong></h3>	
+	<h3><strong style="color:orange;">时间：<s:date name="house.addDate" format="yyyy-MM-dd-HH:mm:ss"/></strong></h3>
 	<h3><strong style="color:orange;">街道：<s:property value="house.street.streetName"/></strong></h3>
 	<h3><strong style="color:orange;">地区：<s:property value="house.district.districtName"/></strong></h3>
+<%-- 	<s:debug/> --%>
 </body>
 </html>

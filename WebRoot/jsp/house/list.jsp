@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body  style="background-image:url('/struts2Obj_1/image/19.jpg');background-repeat: repeat;">
+	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong style="color:gold;font-size:20px;">房屋信息</strong></h1>
 	<strong style="color:gold;font-size:20px;">标号：
 		<s:property value="houses[0].id"/>
@@ -65,12 +66,13 @@
 	</div>
 	<span style="color:darkblue;font-size:18px;"><s:url var="url" namespace="/house" action="op_view">
 		
-		<s:param name="id" value="'1001'"></s:param>
+		<s:param name="id" >1001</s:param>
 		<s:param name="page" value="'32'"></s:param>
 
 	</s:url>
 	
 		<s:a href="%{url}">查看</s:a>
 	</span>
+
 </body>
 </html>

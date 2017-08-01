@@ -134,12 +134,11 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	////
 	
 	public String view() {
-		
 		for(House h:Cache.houses) {
 			
 			
-			if(h.getId()==id) {
-				
+			if(h.getId().equals(id)) {
+				//此为equals的原因为导入的是字符串所以用integer接收的时候要进行字符串的比较而不能简单的进行==的比较
 				this.house = h;
 				break;
 				
@@ -150,6 +149,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			
 			
 		}
+		logger.debug("view方法中Cache.houses的数量:"+Cache.houses.size());
 		return "view";
 		
 		

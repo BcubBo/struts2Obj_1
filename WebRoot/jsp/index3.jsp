@@ -9,6 +9,7 @@
 </head>
 <body style="background-image:url('/struts2Obj_1/image/3.gif');
 	background-repeat: true;width:auto;height:auto;background-color:darkgreen;">
+	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>INDEX3.JSP</strong></h1>
 

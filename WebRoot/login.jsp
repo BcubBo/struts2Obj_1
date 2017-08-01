@@ -12,6 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </head>
 <body style="background-image: url('/struts2Obj_1/image/15.gif');background-repeat: auto;
 	background-color:darkgreen;">
+	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>登录界面</strong></h1>
 	用户登录:<br/>
