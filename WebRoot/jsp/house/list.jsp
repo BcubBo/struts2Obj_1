@@ -6,60 +6,88 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+
+	td{
+		
+		 border: 1px green solid;
+		 background-color: darkblue;
+		 text-align: center;
+	
+	}
+	
+	strong{
+	
+		color:gold;
+		font-size:20px;
+		
+	
+	}
+	
+	table{
+		
+		align:center; 
+		border:3px black solid;
+		width:1000px;
+		height:500px;
+	
+	
+	
+	}
+
+</style>
 </head>
 <body  style="background-image:url('/struts2Obj_1/image/19.jpg');background-repeat: repeat;">
 	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
-	<h1><strong style="color:gold;font-size:20px;">房屋信息</strong></h1>
+	<h1><strong >房屋信息</strong></h1>
 
 	
 
 
-<%-- 	<s:debug/> --%>
+	<s:debug/>
 	
-	<table>
+	<table >
 	
 		<tr>
 		
-			<td>编号：</td>
-			<td>标题：</td>
-			<td>用户：</td>
-			<td>时间：</td>
-			<td>街道：</td>
-			<td>地区：</td>
-			
-		
-		
+			<td><strong >编号</strong></td>
+			<td><strong >标题</strong></td>
+			<td><strong >用户</strong></td>
+			<td><strong >时间</strong></td>
+			<td><strong >街道</strong></td>
+			<td><strong >地区</strong></td>
+
 		</tr>
-		<s:iterator var="house"	value="houses" status="st">
-		<tr>
+		<s:iterator var="h"	value="houses" status="st">
+		<tr style="">
 			<td>
-			<strong style="color:gold;font-size:20px;">
-				<s:property value="house.id"/>
+			<strong>
+				<s:property value="#h.id"/>
 			</strong>
 			</td>
 			<td>
-			<strong style="color:gold;font-size:20px;">
-				<s:property value="house.title"/>
+			<strong>
+				<s:property value="#h.title"/>
 			</strong>
 			</td>
 			<td>
-			<strong style="color:gold;font-size:20px;">：
-				<s:property value="house.user.username"/>
-			</strong>
-			<td/>
-			<td>
-			<strong style="color:gold;font-size:20px;">
-				<s:date name="house.addDate" format="yyyy-MM-dd-HH:mm:ss"/>
+			<strong>
+				<s:property value="#h.user.username"/>
 			</strong>
 			</td>
 			<td>
-			<strong style="color:gold;font-size:20px;">
-				<s:property value="house.street.streetName"/>
+			<strong>
+				<s:date name="#h.addDate" format="yyyy-MM-dd-HH:mm:ss"/>
+			</strong>
+			</td>
+			<td>
+			<strong>
+				<s:property value="#h.street.streetName"/>
 			</strong>			
 			</td>
 			<td>
-			<strong style="color:gold;font-size:20px;">
-				<s:property value="house.district.districtName"/>
+			<strong>
+				<s:property value="#h.district.districtName"/>
 			</strong>			
 			</td>
 		</tr>
