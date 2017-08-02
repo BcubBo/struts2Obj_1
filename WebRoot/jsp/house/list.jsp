@@ -120,7 +120,35 @@
 	
 		<s:a href="%{url}">查看</s:a>
 	</span>
+	<table >
+	
+		<tr>
+		
+			<td><strong >地区</strong></td>
+			<td><strong >街道号</strong></td>
+			<td><strong >编号</strong></td>
+	
+		</tr>
+		
+		<tr>
+			<td>
+			<strong>
+				<s:property value="house.districtId"/>
+			</strong>
+			</td>
+			<td>
+			<strong>
+				<s:property value="house.streetId"/>
+			</strong>
+			</td>
+			<td>
+			<strong>
+				<s:property value="house.id"/>
+			</strong>
+			</td>
 
+		</tr>
+	</table>
 
 	
 

@@ -103,11 +103,12 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		house.setStreet(Cache.houses.get(3).getStreet());
 		house.setAddDate(new Date());
 		house.setHouseType(Cache.houses.get(3).getHouseType());
-
-		logger.debug("房屋的长度\t"+houses.size());
+		house.setDistrict(Cache.houses.get(3).getDistrict());
+		house.setHouseType(Cache.houses.get(3).getHouseType());
+		
 
 		houses.add(house);
-		
+		logger.debug("房屋的长度\t"+houses.size());
 		return "add";
 		
 		
