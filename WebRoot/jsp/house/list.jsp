@@ -18,7 +18,7 @@
 	
 	strong{
 	
-		color:gold;
+		color:yellowgreen;
 		font-size:20px;
 		
 	
@@ -28,8 +28,8 @@
 		
 		align:center; 
 		border:3px black solid;
-		width:1000px;
-		height:500px;
+		width:auto;
+		height:auto;
 	
 	
 	
@@ -123,29 +123,35 @@
 	<table >
 	
 		<tr>
-		
+			<td><strong >编号</strong></td>		
 			<td><strong >地区</strong></td>
 			<td><strong >街道号</strong></td>
-			<td><strong >编号</strong></td>
+			<td><strong >标题</strong></td>
 	
 		</tr>
 		
 		<tr>
 			<td>
 			<strong>
-				<s:property value="house.districtId"/>
-			</strong>
-			</td>
-			<td>
-			<strong>
-				<s:property value="house.streetId"/>
-			</strong>
-			</td>
-			<td>
-			<strong>
 				<s:property value="house.id"/>
 			</strong>
 			</td>
+			<td>
+			<strong>
+				<s:property value="house.street.district.districtName"/>
+			</strong>
+			</td>
+			<td>
+			<strong>
+				<s:property value="house.street.streetName"/>
+			</strong>
+			</td>
+			<td>
+			<strong>
+				<s:property value="house.title"/>
+			</strong>
+			</td>			
+
 
 		</tr>
 	</table>

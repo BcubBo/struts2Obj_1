@@ -32,7 +32,6 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	private Integer streetId;
 	private Integer id;
 	private House house;
-
 	
 	private static final long serialVersionUID = -1725638051474259449L;
 	
@@ -62,7 +61,6 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		//标题ok
 		//房屋类型的选择
 		this.houses = Cache.houses;
-		House hs =new House();
 		int houseTypeId = house.getHouseType().getTypeId();
 		logger.debug(houseTypeId+":<<<<<<<<<<<<<<<<");
 		for(HouseType ht :Cache.houseTypes) {
