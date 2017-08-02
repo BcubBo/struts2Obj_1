@@ -132,7 +132,7 @@ public class Cache {
 		//houseTypes = Arrays.asList(houseType,houseType1,houseType2);会报错的方法
 		houseTypes = new ArrayList<HouseType>();
 		HouseType[] houseTypesArray = {houseType,houseType1,houseType2};
-		for(int i= 0;i<houseArray.length;i++) {
+		for(int i= 0;i<houseTypesArray.length;i++) {
 			
 			houseTypes.add(houseTypesArray[i]);
 			
