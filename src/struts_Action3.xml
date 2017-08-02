@@ -11,6 +11,11 @@
 			<result name="{1}_success">/jsp/house/{1}_success.jsp</result>
 			<result name="{1}">/jsp/house/{1}.jsp</result>
 		</action>
+		<action name="add" class="action.HouseAction" method="add">
+		
+
+			<result name="add">/jsp/house/add_success.jsp</result>
+		</action>		
 	</package>
 
 </struts>

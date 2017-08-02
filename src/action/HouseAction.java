@@ -17,31 +17,22 @@ import org.apache.struts2.interceptor.SessionAware;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
+import po.District;
 import po.House;
+import po.HouseType;
+import po.Street;
 import util.Cache;
 public class HouseAction extends ActionSupport implements RequestAware,SessionAware,ApplicationAware,ServletRequestAware {
 
 	/**
 	 * 
 	 */
-	private House house;
-	public House getHouse() {
-		return house;
-	}
-
-	public void setHouse(House house) {
-		this.house = house;
-	}
-
+	private Integer districtId;
+	private Integer streetId;
 	private Integer id;
-	public Integer getId() {
-		return id;
-	}
+	private House house;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
+	
 	private static final long serialVersionUID = -1725638051474259449L;
 	
 	private Map<String,Object> request;
@@ -55,65 +46,63 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	private Map<String,Object> application;
 	
 	private Logger logger  = (Logger)LogManager.getLogger();
+	/////////////////////
+	
+	
+	
+	
+	
 
-	@Override
-	public String execute() throws Exception {
-		
-		request.put("user", "testUser");
-		application.put("app", "testApp");
-		session.put("session", "testSession");
-		//第三种
-		
-		ServletActionContext.getRequest().getContextPath();
-		//解耦和
-		
-		
-		return SUCCESS;
-	}//
 
-	@Override
-	public void setRequest(Map<String, Object> request) {
-		
-		this.request=request;
-		
-		
-		
-		
-	}//
 
-	@Override
-	public void setSession(Map<String, Object> session) {
-			
-		this.session = session;
-		
-		
-		
-	}//
-
-	@Override
-	public void setApplication(Map<String, Object> application) {
-		
-		this.application = application;
-		
-	}
-	//
-
-	@Override
-	public void setServletRequest(HttpServletRequest request) {
-			
-		//和servletAPI进行了耦合
-		
-		request.setAttribute("servlet","testServlet");
-		
-		
-		
-	}
 	
 	////
 	public String add() {
+		//标题ok
+		//房屋类型的选择
+		this.houses = Cache.houses;
+		House hs =new House();
+		int houseTypeId = house.getHouseType().getTypeId();
+		logger.debug(houseTypeId+":<<<<<<<<<<<<<<<<");
+		for(HouseType ht :Cache.houseTypes) {
+			
+			
+			if(ht.getTypeId()==houseTypeId) {
+				
+				
+				hs.setHouseType(ht);
+				logger.debug(ht.getTypeName()+"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HouseTypeName");
+				break;
+			}
+		}
+		//位置信息
+		//districtId,streetId
+		
+		for(Street st:Cache.streets) {
+			if(st.getStreetId()==streetId) {
+				hs.setStreet(st);
+			}
+
+		}
+		for(District dt:Cache.districts) {
+			
+			if(dt.getDistrictId()==(int)districtId) {
+				
+				hs.getStreet().setDistrict(dt);
+				logger.debug(dt.getDistrictName()+":<<<<<<<<<");
+				break;
+			}
+			
+			
+
+		}
+//	
+
+		this.house=hs;
+		logger.debug("房屋的长度\t"+houses.size());
 		
 		
-		return "add_success";
+		return "add";
 		
 		
 		
@@ -176,6 +165,93 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		this.houses = houses;
 	}
 	
+
+
 	
+	public House getHouse() {
+		return house;
+	}
+
+	public Integer getStreetId() {
+		return streetId;
+	}
+
+	public void setStreetId(Integer streetId) {
+		this.streetId = streetId;
+	}
+
+	public Integer getDistrictId() {
+		return districtId;
+	}
+
+	public void setDistrictId(Integer districtId) {
+		this.districtId = districtId;
+	}
+
+	public void setHouse(House house) {
+		this.house = house;
+	}
+
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	@Override
+	public String execute() throws Exception {
+		
+		request.put("user", "testUser");
+		application.put("app", "testApp");
+		session.put("session", "testSession");
+		//第三种
+		
+		ServletActionContext.getRequest().getContextPath();
+		//解耦和
+		
+		
+		return SUCCESS;
+	}//
+
+	@Override
+	public void setRequest(Map<String, Object> request) {
+		
+		this.request=request;
+		
+		
+		
+		
+	}//
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+			
+		this.session = session;
+		
+		
+		
+	}//
+
+	@Override
+	public void setApplication(Map<String, Object> application) {
+		
+		this.application = application;
+		
+	}
+	//
+
+	@Override
+	public void setServletRequest(HttpServletRequest request) {
+			
+		//和servletAPI进行了耦合
+		
+		request.setAttribute("servlet","testServlet");
+		
+		
+		
+	}
 
 }
