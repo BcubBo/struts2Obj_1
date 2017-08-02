@@ -14,7 +14,7 @@
 		<action name="add" class="action.HouseAction" method="add">
 		
 
-			<result name="add">/jsp/house/add_success.jsp</result>
+			<result name="add">/jsp/house/list.jsp</result>
 		</action>		
 	</package>
 

@@ -120,64 +120,7 @@
 	
 		<s:a href="%{url}">查看</s:a>
 	</span>
-	<table >
-	
-		<tr>
-		
-			<td><strong >编号</strong></td>
-			<td><strong >标题</strong></td>
-			<td><strong >用户</strong></td>
-			<td><strong >时间</strong></td>
-			<td><strong >街道</strong></td>
-			<td><strong >地区</strong></td>
 
-		</tr>
-		
-		
-		<tr
-			<s:if test="(#st.index)%2!=0">
-				bgcolor="greenyellow"
-			</s:if>
-			<s:if test="(#st.index)%2==0">
-				bgcolor="buttonface"
-			</s:if>
-		
-		
-		>
-			<td>
-			<strong>
-				<s:property value="house.id"/>
-			</strong>
-			</td>
-			<td>
-			<strong>
-				<s:property value="house.title"/>
-			</strong>
-			</td>
-			<td>
-			<strong>
-				<s:property value="house.user.username"/>
-			</strong>
-			</td>
-			<td>
-			<strong>
-				<s:date name="house.addDate" format="yyyy-MM-dd-HH:mm:ss"/>
-			</strong>
-			</td>
-			<td>
-			<strong>
-				<s:property value="house.street.streetName"/>
-			</strong>			
-			</td>
-			<td>
-			<strong>
-				<s:property value="house.street.district.districtName"/>
-			</strong>			
-			</td>
-		</tr>
-
-	
-	</table>
 
 	
 

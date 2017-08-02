@@ -118,12 +118,39 @@ public class Cache {
 			street4 = 	house4.getStreet();
 			street5 = 	house5.getStreet();
 		users = Arrays.asList(u1,u2,u3,u4,u5,u6);
+		House[] houseArray = {house,house1,house2,house3,house4,house5};
+		houses = new ArrayList<House>();
+		for(int i = 0;i<houseArray.length;i++) {
+			
+			
+			houses.add(houseArray[i]);
+			
+			
+			
+		}
 		
-		houses = Arrays.asList(house,house1,house2,house3,house4,house5);
+		//houseTypes = Arrays.asList(houseType,houseType1,houseType2);会报错的方法
+		houseTypes = new ArrayList<HouseType>();
+		HouseType[] houseTypesArray = {houseType,houseType1,houseType2};
+		for(int i= 0;i<houseArray.length;i++) {
+			
+			houseTypes.add(houseTypesArray[i]);
+			
+			
+			
+		}
 		
-		houseTypes = Arrays.asList(houseType,houseType1,houseType2);
 		
-		streets = Arrays.asList(street,street1,street2,street3,street4,street5);
+		//streets = Arrays.asList(street,street1,street2,street3,street4,street5);
+		streets = new ArrayList<Street>();
+		
+		Street[] streetsArray = {street,street1,street2,street3,street4,street5};
+		for(int i= 0;i<houseArray.length;i++) {
+			
+			streets.add(streetsArray[i]);
+			
+			
+		}
 		
 		District district,district1,district2 = null;
 			district = house.getDistrict();
@@ -132,7 +159,16 @@ public class Cache {
 			//此处的获取District的方法是再street中定义的，而没有再house中设置street
 		
 		
-		districts = Arrays.asList(district,district1,district2);
+		//districts = Arrays.asList(district,district1,district2);
+		districts = new ArrayList<District>();
+		District[] districtArray = {district,district1,district2};
+		for(int i = 0;i<districtArray.length;i++) {
+			
+			districts.add(districtArray[i]);
+			
+			
+			
+		}
 		
 		
 		areas = new HashMap<Integer,List<Street>>();

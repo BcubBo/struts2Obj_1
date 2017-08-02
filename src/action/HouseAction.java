@@ -1,6 +1,7 @@
 package action;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -70,7 +71,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			if(ht.getTypeId()==houseTypeId) {
 				
 				
-				hs.setHouseType(ht);
+				house.setHouseType(ht);
 				logger.debug(ht.getTypeName()+"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HouseTypeName");
 				break;
 			}
@@ -80,7 +81,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 		for(Street st:Cache.streets) {
 			if(st.getStreetId()==streetId) {
-				hs.setStreet(st);
+				house.setStreet(st);
 			}
 
 		}
@@ -88,7 +89,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			
 			if(dt.getDistrictId()==(int)districtId) {
 				
-				hs.getStreet().setDistrict(dt);
+				house.getStreet().setDistrict(dt);
 				logger.debug(dt.getDistrictName()+":<<<<<<<<<");
 				break;
 			}
@@ -97,10 +98,15 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 
 		}
 //	
+		house.setUser(Cache.houses.get(3).getUser());
+		house.setId(1111);
+		house.setStreet(Cache.houses.get(3).getStreet());
+		house.setAddDate(new Date());
+		house.setHouseType(Cache.houses.get(3).getHouseType());
 
-		this.house=hs;
 		logger.debug("房屋的长度\t"+houses.size());
-		
+
+		houses.add(house);
 		
 		return "add";
 		
