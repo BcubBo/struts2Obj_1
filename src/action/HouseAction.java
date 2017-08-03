@@ -100,9 +100,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		house.setId(1111);
 		house.setStreet(Cache.houses.get(3).getStreet());
 		house.setAddDate(new Date());
-		house.setHouseType(Cache.houses.get(3).getHouseType());
 		house.setDistrict(Cache.houses.get(3).getDistrict());
-		house.setHouseType(Cache.houses.get(3).getHouseType());
 		
 
 		houses.add(house);

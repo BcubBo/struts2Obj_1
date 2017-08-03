@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@taglib prefix="s" uri="/struts-tags" %>
+    <%@taglib prefix="sx" uri="/struts-dojo-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -127,7 +128,8 @@
 			<td><strong >地区</strong></td>
 			<td><strong >街道号</strong></td>
 			<td><strong >标题</strong></td>
-	
+			<td><strong >发布日期</strong></td>
+			<td><strong >房屋类型</strong></td>		
 		</tr>
 		
 		<tr>
@@ -151,11 +153,21 @@
 				<s:property value="house.title"/>
 			</strong>
 			</td>			
-
+			<td>
+			<strong>
+				<s:date name="house.addDate" format="yyyy-MM-dd" />
+			</strong>
+			</td>	
+			<td>
+			<strong>
+				<s:property value="house.houseType.typeName"/>
+			</strong>
+			</td>	
 
 		</tr>
 	</table>
-
+	<sx:head />
+	<sx:datetimepicker name="house.addDate" label="发表时间" displayFormat="yyyy-MM-dd"></sx:datetimepicker>
 	
 
 </body>

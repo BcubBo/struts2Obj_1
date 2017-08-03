@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
     <%@taglib prefix="s" uri="/struts-tags" %>
     <%String path  = request.getContextPath(); %>
+    <%@taglib prefix="sx" uri="/struts-dojo-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,6 +21,7 @@
 	
 
 	body{background-color: yellowgreen;}
+	#nobr br{display:none;}
 
 </style>
 </head>
@@ -27,17 +29,21 @@
 	background-repeat: true;width:1000px;height:1000px;background-color:darkgreen;">
 
 	<br/>
+	<div id="nobr">
 	<h2><strong>
-	房屋添加页面<!-- 默认为xhtml -->
-	
-	<s:form action="/house/add" method="post">
+	房屋添加页面<!-- 默认为xhtml --><br/>
+	<sx:head />
+	<sx:datetimepicker name="house.addDate.addDate" label="发表时间" displayFormat="yyyy-MM-dd"></sx:datetimepicker>	
+
+	<s:form action="/house/op_add" method="post">
+
 		<s:textfield label="标题" name="house.title"></s:textfield>
 		<s:select label="房屋类型" 
 			name="house.houseType.typeId"
 			list="@util.Cache@houseTypes"
 			listKey="typeId"
 			listValue="typeName"
-			
+
 		
 		
 		></s:select>
@@ -64,8 +70,10 @@
 
 		<s:submit />	
 	</s:form>
+
 	</strong>
 	</h2>
+	</div>
 	
 </body>
 </html>
