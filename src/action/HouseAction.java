@@ -105,6 +105,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 
 		houses.add(house);
 		logger.debug("房屋的长度\t"+houses.size());
+		logger.debug("走到add方法返回值前边");
 		return "add";
 		
 		
@@ -132,7 +133,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		System.out.println("HouseAction中\t"+Cache.houses.size());
 		ActionContext ac = ActionContext.getContext();
 		logger.debug("房屋的长度\t"+houses.size());
-		
+		logger.debug("走到list方法返回值前边");
 		return "list";
 		
 		
@@ -156,24 +157,79 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			
 		}
 		logger.debug("view方法中Cache.houses的数量:"+Cache.houses.size());
+		logger.debug("走到view方法返回值前边");
 		return "view";
 		
 		
 	}
 	public String update() {
 		
-		
-		return "update_success";
+		logger.debug("走到update方法返回值前边");
+		return "input";
 	}
 	////
 	public String delete() {
-		
+		logger.debug("走到delete方法返回值前边");
 		return "delete_success";
 		
 		
 		
 	}
 
+
+
+	@Override
+	public String execute() throws Exception {
+		
+		request.put("user", "testUser");
+		application.put("app", "testApp");
+		session.put("session", "testSession");
+		//第三种
+		
+		ServletActionContext.getRequest().getContextPath();
+		//解耦和
+		
+		logger.debug("走到excute方法返回值前边");
+		return SUCCESS;
+	}//
+
+	@Override
+	public void setRequest(Map<String, Object> request) {
+		
+		this.request=request;
+		
+		
+		
+		
+	}//
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+			
+		this.session = session;
+		
+		
+		
+	}//
+
+	@Override
+	public void setApplication(Map<String, Object> application) {
+		
+		this.application = application;
+		
+	}
+	//
+
+	@Override
+	public void setServletRequest(HttpServletRequest request) {
+			
+		//和servletAPI进行了耦合
+		
+		request.setAttribute("servlet","testServlet");
+		
+		
+		
+	}
 	public List<House> getHouses() {
 		return houses;
 	}
@@ -217,58 +273,4 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	@Override
-	public String execute() throws Exception {
-		
-		request.put("user", "testUser");
-		application.put("app", "testApp");
-		session.put("session", "testSession");
-		//第三种
-		
-		ServletActionContext.getRequest().getContextPath();
-		//解耦和
-		
-		
-		return SUCCESS;
-	}//
-
-	@Override
-	public void setRequest(Map<String, Object> request) {
-		
-		this.request=request;
-		
-		
-		
-		
-	}//
-
-	@Override
-	public void setSession(Map<String, Object> session) {
-			
-		this.session = session;
-		
-		
-		
-	}//
-
-	@Override
-	public void setApplication(Map<String, Object> application) {
-		
-		this.application = application;
-		
-	}
-	//
-
-	@Override
-	public void setServletRequest(HttpServletRequest request) {
-			
-		//和servletAPI进行了耦合
-		
-		request.setAttribute("servlet","testServlet");
-		
-		
-		
-	}
-
 }

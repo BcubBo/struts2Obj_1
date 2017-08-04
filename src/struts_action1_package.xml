@@ -3,7 +3,7 @@
 	"-//Apache Software Foundation//DTD Struts Conifguration 2.3//EN" 
 	"D:\JARPack\struts2lib\struts-2.3.dtd">
 <struts>
-		<package name="action1"  namespace="/jsp/erro" extends="struts-default" >
+		<package name="action1"  namespace="/jsp/erro" extends="default" >
     	<action name="index1" class="action.DefaultAction">
     		<result name="success">/jsp/success.jsp</result>
     		<result name="input">/jsp/index2.jsp</result>

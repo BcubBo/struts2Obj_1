@@ -4,18 +4,23 @@
 	"D:\JARPack\struts2lib\struts-2.3.dtd">
 <struts>
 
-		<package name="house" namespace="/house" extends = "struts-default">
+		<package name="house" namespace="/house" extends = "default">
 	
-		<action name="op_*" class="action.HouseAction" method="{1}">
+<!-- 		<action name="op_*" class="action.HouseAction" method="{1}">
 		
 			<result name="{1}_success">/jsp/house/{1}_success.jsp</result>
 			<result name="{1}">/jsp/house/{1}.jsp</result>
-		</action>
+		</action> -->
 		<action name="add" class="action.HouseAction" method="add">
-		
-
+			<result name="list" type="redirectAction">
+				<param name="actionName">op_list</param>
+			</result>
+			<result name="input">/jsp/house/input.jsp</result>
 			<result name="add">/jsp/house/list.jsp</result>
-		</action>		
+		</action>
+
+		
+				
 	</package>
 
 </struts>
