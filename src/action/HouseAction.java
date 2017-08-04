@@ -116,11 +116,12 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	public void validate() {
 		// TODO Auto-generated method stub
 		//super.validate();
+		if(house.getTitle().length()==0) {
+			this.addActionError("请重新输入");//始终添加错误
+			this.addFieldError("house.title", "标题不能为空");//始终添加错误，无法跳转
+			//添加addActionError
 		
-		this.addActionError("请重新输入");
-		//添加addActionError
-		
-		
+		}
 		
 		
 		
@@ -157,6 +158,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			
 		}
 		logger.debug("view方法中Cache.houses的数量:"+Cache.houses.size());
+		
 		logger.debug("走到view方法返回值前边");
 		return "view";
 		

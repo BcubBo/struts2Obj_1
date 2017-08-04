@@ -12,9 +12,9 @@
 <!--     <constant name="struts.ui.theme" value="css_xhtml"></constant> -->
     <!-- Add packages here -->
     <package name="default" namespace="" extends="struts-default">
-    	<global-results>
+<!--     	<global-results>
     		<result name="error">/errors.jsp</result>
-    	</global-results>
+    	</global-results> -->
     	<action name="index" class="action.DefaultAction">
     		<result name="success">${rs}</result>
     	</action>

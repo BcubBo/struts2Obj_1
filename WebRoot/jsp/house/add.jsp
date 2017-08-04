@@ -28,6 +28,7 @@
 <body style="background-image:url('<%=path%>/image/15.gif');
 	background-repeat: true;width:1000px;height:1000px;background-color:darkgreen;">
 	<h1><s:actionerror/></h1>
+	<h1><s:fielderror></s:fielderror></h1>
 	<br/>
 	<h2><strong>	房屋添加页面<!-- 默认为xhtml --><br/>
 	<sx:head />
