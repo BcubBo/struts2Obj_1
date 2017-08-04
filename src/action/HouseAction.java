@@ -111,6 +111,20 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 	}
 	
+	@Override
+	public void validate() {
+		// TODO Auto-generated method stub
+		//super.validate();
+		
+		this.addActionError("请重新输入");
+		//添加addActionError
+		
+		
+		
+		
+		
+	}
+	////////
 	////
 	public String list() {
 		

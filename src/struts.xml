@@ -26,10 +26,10 @@
     	
     	</action>
     </package>
-	<include file="struts_Action.xml"></include>
-	<include file="struts_Action1.xml"></include>
-	<include file="struts_Action2.xml"></include>
-	<include file="struts_Action3.xml"></include>
+	<include file="struts_action1_package.xml"></include>
+	<include file="struts_house_package.xml"></include>
+	<include file="struts_jsp_package.xml"></include>
+	<include file="struts_user_package.xml"></include>
 
 
 
