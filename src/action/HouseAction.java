@@ -62,7 +62,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		//房屋类型的选择
 		this.houses = Cache.houses;
 		int houseTypeId = house.getHouseType().getTypeId();
-		logger.debug(houseTypeId+":<<<<<<<<<<<<<<<<");
+		logger.debug(houseTypeId+"<<<<房屋类型id");
 		for(HouseType ht :Cache.houseTypes) {
 			
 			
@@ -70,7 +70,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 				
 				
 				house.setHouseType(ht);
-				logger.debug(ht.getTypeName()+"<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<HouseTypeName");
+				logger.debug(ht.getTypeName()+"<<<<<<房屋类型名称");
 				break;
 			}
 		}
@@ -88,7 +88,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			if(dt.getDistrictId()==(int)districtId) {
 				
 				house.getStreet().setDistrict(dt);
-				logger.debug(dt.getDistrictName()+":<<<<<<<<<");
+				logger.debug(dt.getDistrictName()+"<<<区域名称");
 				break;
 			}
 			
@@ -112,7 +112,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 	}
 	
-	@Override
+/*	@Override
 	public void validate() {
 		// TODO Auto-generated method stub
 		//super.validate();
@@ -137,10 +137,9 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			logger.debug("validateAdd方法验证");
 			
 		}
+				
 		
-		
-		
-	}
+	}*/
 	
 	
 	
