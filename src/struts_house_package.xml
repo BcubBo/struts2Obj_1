@@ -11,19 +11,19 @@
 			<interceptor-stack name="myInterceptorStack">
 				<interceptor-ref name="myInterceptorSerial_001"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<!-- 这里要设置默认的拦截器栈进行拦截 -->
 			</interceptor-stack>
 		</interceptors>
-<!-- 		<default-interceptor-ref name="defaultStack"></default-interceptor-ref> -->
+		<default-interceptor-ref name="myInterceptorStack"></default-interceptor-ref>
+<!-- 		<default-interceptor-ref name="defaultStack"></default-interceptor-ref>		 -->
 		<action name="op_*" class="action.HouseAction" method="{1}">
 		
 			<result name="{1}_success">/jsp/house/{1}_success.jsp</result>
 			<result name="{1}">/jsp/house/{1}.jsp</result>
+			<result name="input">/jsp/house/input.jsp</result>
 		</action>
 		<action name="add" class="action.HouseAction" method="add">
-			<result name="list" type="redirectAction">
-				<param name="actionName">op_list</param>
-			</result>
-			<result name="input">/jsp/house/input.jsp</result>
+			<result name="input">/jsp/house/add.jsp</result>
 			<result name="add">/jsp/house/list.jsp</result>
 			<interceptor-ref name="myInterceptorStack"></interceptor-ref>
 		</action>

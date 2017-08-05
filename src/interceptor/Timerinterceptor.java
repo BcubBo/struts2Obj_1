@@ -21,8 +21,7 @@ public class Timerinterceptor extends AbstractInterceptor {
 		//位置顺序很重要
 		Date end = new Date();
 
-		logger.debug(end.getTime());
-		logger.debug(begin.getTime());
+
 		logger.debug("interceptor进行了拦截总共method执行时间："+((end.getTime())-(begin.getTime())));
 		
 		return result;

@@ -112,17 +112,20 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 	}
 	
-/*	@Override
+	@Override
 	public void validate() {
 		// TODO Auto-generated method stub
 		//super.validate();
 		logger.debug("house对象的值为:"+house);
-		if(house!=null && house.getTitle().length()==0) {
-			this.addActionError("请重新输入");//始终添加错误
-			this.addFieldError("house.title", "标题不能为空");//始终添加错误，无法跳转
-			//添加addActionError
-		
+		if(house!=null && house.getTitle().length()==0 ) {
+			
+				this.addActionError("请重新输入");//始终添加错误
+				this.addFieldError("house.title", "标题不能为空");//始终添加错误，无法跳转
+				//添加addActionError
+				logger.debug("validate内部报错位置");
+			
 		}
+	
 		
 		
 		
@@ -130,7 +133,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	////////validate方法
 	public void validateAdd() {
 		
-		if(house.getTitle().length()==0) {
+		if(house!=null && house.getTitle().length()==0) {
 			
 			this.addActionError("单一方法校验，validateAdd请重新输入！");
 			this.addFieldError("house.title","validateAdd方法校验，标题不可为空");
@@ -139,7 +142,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		}
 				
 		
-	}*/
+	}
 	
 	
 	
@@ -160,6 +163,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	////
 	
 	public String view() {
+		logger.debug(Cache.houses.size());
 		for(House h:Cache.houses) {
 			
 			
