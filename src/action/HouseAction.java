@@ -116,7 +116,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 	public void validate() {
 		// TODO Auto-generated method stub
 		//super.validate();
-		if(house.getTitle().length()==0) {
+		if(house.getTitle()!=null && house.getTitle().length()==0) {
 			this.addActionError("请重新输入");//始终添加错误
 			this.addFieldError("house.title", "标题不能为空");//始终添加错误，无法跳转
 			//添加addActionError
