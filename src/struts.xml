@@ -12,6 +12,16 @@
 <!--     <constant name="struts.ui.theme" value="css_xhtml"></constant> -->
     <!-- Add packages here -->
     <package name="default" namespace="" extends="struts-default">
+    		<interceptors>
+		
+			<interceptor name="myInterceptorSerial_001" class="interceptor.Timerinterceptor"></interceptor>
+			<interceptor-stack name="myInterceptorStack">
+				<interceptor-ref name="myInterceptorSerial_001"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<!-- 这里要设置默认的拦截器栈进行拦截 -->
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="myInterceptorStack"></default-interceptor-ref>
 <!--     	<global-results>
     		<result name="error">/errors.jsp</result>
     	</global-results> -->

@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Struts2 Demo</title>
 </head>
-<body style="background-color:darkgreen;">
+<body style="background-color:darkgreen;background-image:url('/struts2Obj_1/image/7.gif')">
 	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>登录界面</strong></h1>
