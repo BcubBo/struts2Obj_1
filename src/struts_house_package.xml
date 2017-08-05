@@ -5,7 +5,15 @@
 <struts>
 
 		<package name="house" namespace="/house" extends = "default">
-	
+		<interceptors>
+		
+			<interceptor name="myInterceptorSerial_001" class="interceptor.Timerinterceptor"></interceptor>
+			<interceptor-stack name="myInterceptorStack">
+				<interceptor-ref name="myInterceptorSerial_001"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+<!-- 		<default-interceptor-ref name="defaultStack"></default-interceptor-ref> -->
 		<action name="op_*" class="action.HouseAction" method="{1}">
 		
 			<result name="{1}_success">/jsp/house/{1}_success.jsp</result>
@@ -17,6 +25,7 @@
 			</result>
 			<result name="input">/jsp/house/input.jsp</result>
 			<result name="add">/jsp/house/list.jsp</result>
+			<interceptor-ref name="myInterceptorStack"></interceptor-ref>
 		</action>
 
 		
