@@ -62,7 +62,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		//房屋类型的选择
 		this.houses = Cache.houses;
 		int houseTypeId = house.getHouseType().getTypeId();
-		logger.debug(houseTypeId+"<<<<房屋类型id");
+/*		logger.debug(houseTypeId+"<<<<房屋类型id");*/
 		for(HouseType ht :Cache.houseTypes) {
 			
 			
@@ -70,7 +70,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 				
 				
 				house.setHouseType(ht);
-				logger.debug(ht.getTypeName()+"<<<<<<房屋类型名称");
+/*				logger.debug(ht.getTypeName()+"<<<<<<房屋类型名称");*/
 				break;
 			}
 		}
@@ -88,7 +88,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 			if(dt.getDistrictId()==(int)districtId) {
 				
 				house.getStreet().setDistrict(dt);
-				logger.debug(dt.getDistrictName()+"<<<区域名称");
+/*				logger.debug(dt.getDistrictName()+"<<<区域名称");*/
 				break;
 			}
 			
@@ -104,8 +104,8 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		
 
 		houses.add(house);
-		logger.debug("房屋的长度\t"+houses.size());
-		logger.debug("走到add方法返回值前边");
+/*		logger.debug("房屋的长度\t"+houses.size());
+		logger.debug("走到add方法返回值前边");*/
 		return "add";
 		
 		
@@ -122,7 +122,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 				this.addActionError("请重新输入");//始终添加错误
 				this.addFieldError("house.title", "标题不能为空");//始终添加错误，无法跳转
 				//添加addActionError
-				logger.debug("validate内部报错位置");
+				logger.debug("validate内部设置的报错位置");
 			
 		}
 	
@@ -154,8 +154,8 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		this.houses = Cache.houses;
 		System.out.println("HouseAction中\t"+Cache.houses.size());
 		ActionContext ac = ActionContext.getContext();
-		logger.debug("房屋的长度\t"+houses.size());
-		logger.debug("走到list方法返回值前边");
+/*		logger.debug("房屋的长度\t"+houses.size());
+		logger.debug("走到list方法返回值前边");*/
 		return "list";
 		
 		
