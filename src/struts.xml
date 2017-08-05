@@ -14,7 +14,7 @@
     <package name="default" namespace="" extends="struts-default">
     		<interceptors>
 		
-			<interceptor name="myInterceptorSerial_001" class="interceptor.Timerinterceptor"></interceptor>
+			<interceptor name="myInterceptorSerial_001" class="interceptor.TimerInterceptor"></interceptor>
 			<interceptor-stack name="myInterceptorStack">
 				<interceptor-ref name="myInterceptorSerial_001"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>

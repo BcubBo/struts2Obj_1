@@ -10,19 +10,19 @@ import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
 import po.User;
 
-public class Timerinterceptor extends AbstractInterceptor {
-
+public class TimerInterceptor extends AbstractInterceptor {
+	Logger logger = (Logger)LogManager.getLogger();
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
 		// TODO Auto-generated method stub
 		Date begin = new Date();
-		Logger logger = (Logger)LogManager.getLogger();
+
+		logger.info("TimerInterceptor启动");
 		String result = invocation.invoke();
 		//位置顺序很重要
 		Date end = new Date();
-
-
-		logger.debug("interceptor进行了拦截总共method执行时间："+((end.getTime())-(begin.getTime())));
+		logger.info("TimerInterceptor结束");
+		logger.debug("执行时间："+((end.getTime())-(begin.getTime())));
 		
 		return result;
 	}
