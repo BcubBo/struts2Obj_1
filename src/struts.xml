@@ -18,7 +18,6 @@
     	<action name="index" class="action.DefaultAction">
     		<result name="success">${rs}</result>
     	</action>
-		
     	<action name="index2" class="action.Default1Action">
     		<result name="success">/jsp/index2.jsp</result>
     		<result name="input">/jsp/add_failed.jsp</result>
