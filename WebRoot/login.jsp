@@ -27,6 +27,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	
 	</form>
-
+<s:debug/>
 </body>
 </html>

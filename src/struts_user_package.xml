@@ -4,12 +4,22 @@
 	"D:\JARPack\struts2lib\struts-2.3.dtd">
 <struts>
 	<package name="user" namespace="/user" extends="default">
+<!--     	<interceptors>
 		
-		<action name="login" class="action.UserBeanAction" >
+			<interceptor name="myInterceptor" class="interceptor.LogInterceptor"></interceptor>
+			<interceptor-stack name="myGlobalInterceptorStack">
+				<interceptor-ref name="myInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				这里要设置默认的拦截器栈进行拦截
+			</interceptor-stack>
+		</interceptors>		
+		<default-interceptor-ref name="myGlobalInterceptorStack"></default-interceptor-ref> -->	
+		<action name="login" class="action.UserBeanAction" method="login" >
 		
 			<result name="success" >/jsp/login_success.jsp</result>
-			<result name="input">/jsp/login.jsp</result>
+			<result name="login">/jsp/login.jsp</result>
 			
+	
 			
 			
 			<result name="error">/errors1.jsp</result>

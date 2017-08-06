@@ -4,6 +4,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,7 +15,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>登录界面</strong></h1>
-	用户登录:<br/>
+	用户登录:<br/><s:property value="#loginMsg"/>
 	<form action="<%=path %>/user/login.action" method="post">
 	
 		<input type="text" value="" name="user.username"><br/>
@@ -25,6 +26,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	
 	
 	</form>
-
+<s:debug/>
 </body>
 </html>

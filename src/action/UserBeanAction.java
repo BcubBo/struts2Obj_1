@@ -32,10 +32,10 @@ public class UserBeanAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 8273548157105774477L;
-	public void validate() {
+/*	public void validate() {
 		
-		if(user.getUsername() ==null || user.getPassword() == null) {
-			
+		if(user.getUsername() == null || user.getPassword() == null) {
+			System.out.println("校验器内部");
 			this.addFieldError("user.username","请输入账户名称");
 			
 			this.addFieldError("user.password", "请输入密码");
@@ -45,16 +45,11 @@ public class UserBeanAction extends ActionSupport {
 		
 		
 		
-	}
+	}*/
+
 	@Override
 	public String execute() throws Exception {
-
-/*		if(true) {
-			
-			return "error";
-			
-			
-		}*/
+		System.out.println("进入UserBeanAction的execute方法中");
 		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
 		boolean flag = false;
 		//要处理的代码
@@ -83,10 +78,46 @@ public class UserBeanAction extends ActionSupport {
 			return SUCCESS;
 		}
 		else {
-			return INPUT;
+			return LOGIN;
 		}
 	}//
-	
+	public String login() {
+		
+		System.out.println("进入UserBeanAction的execute方法中");
+		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
+		boolean flag = false;
+		//要处理的代码
+		if(user.getUsername().equals("bcubbo")&&user.getPassword().equals("bcubbo")) {
+				flag =true;
+				ActionContext ac = ActionContext.getContext();
+				//获取动作上下文
+				//将对象放入到session中
+			Map<String,Object> result = ac.getSession();
+			result.put("user", this.user);
+			
+			//获取request
+			
+			@SuppressWarnings("unchecked")
+			Map<String,Object> request = (Map<String,Object>)ac.get("request");
+			////
+			
+			request.put("user",user);
+			
+			date = new Date();
+		
+		
+			
+		}
+		if(flag) {
+			return SUCCESS;
+		}
+		else {
+			return INPUT;
+		}
+		
+		
+		
+	}
 	public String add() {
 		System.out.println("使用动态方法进行方法调用，调用add方法，添加成功");
 		return "add_success";

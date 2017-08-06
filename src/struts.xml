@@ -15,13 +15,18 @@
     		<interceptors>
 		
 			<interceptor name="myInterceptorSerial_001" class="interceptor.TimerInterceptor"></interceptor>
-			<interceptor-stack name="myInterceptorStack">
+			<interceptor name="myInterceptor" class="interceptor.LogInterceptor"></interceptor>
+			<interceptor-stack name="myGlobalInterceptorStack">
 				<interceptor-ref name="myInterceptorSerial_001"></interceptor-ref>
+				<interceptor-ref name="myInterceptor"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 				<!-- 这里要设置默认的拦截器栈进行拦截 -->
 			</interceptor-stack>
 		</interceptors>
-		<default-interceptor-ref name="myInterceptorStack"></default-interceptor-ref>
+		<default-interceptor-ref name="myGlobalInterceptorStack"></default-interceptor-ref>
+		<global-results>
+			<result name="login" >/jsp/login.jsp</result>
+		</global-results>
 <!--     	<global-results>
     		<result name="error">/errors.jsp</result>
     	</global-results> -->
