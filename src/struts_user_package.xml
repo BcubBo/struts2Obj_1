@@ -14,7 +14,7 @@
 			</interceptor-stack>
 		</interceptors>		
 		<default-interceptor-ref name="myGlobalInterceptorStack"></default-interceptor-ref> -->	
-		<action name="login" class="action.UserBeanAction" method="login" >
+		<action name="login" class="action.UserBeanAction" >
 		
 			<result name="success" >/jsp/login_success.jsp</result>
 			<result name="login">/jsp/login.jsp</result>

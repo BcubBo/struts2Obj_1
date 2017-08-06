@@ -35,57 +35,60 @@ public class UserBeanAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 8273548157105774477L;
-	public void validate() {
-		if(user!=null) {
+	public void validateLogin() {
+
 		if(user.getUsername() == null || user.getPassword() == null) {
 			System.out.println("校验器内部");
 			this.addFieldError("user.username","请输入账户名称");
-			
+				
 			this.addFieldError("user.password", "请输入密码");
-			
-			
 			}
-		
-		}
+	
 		
 	}
 
 	@Override
 	public String execute() throws Exception {
-		System.out.println("进入UserBeanAction的execute方法中");
-		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
-		boolean flag = false;
-		//要处理的代码
-		if(user.getUsername().equals("bcubbo")&&user.getPassword().equals("bcubbo")) {
-			flag =true;
-			ActionContext ac = ActionContext.getContext();
-			//获取动作上下文
-			//将对象放入到session中
-		Map<String,Object> result = ac.getSession();
-		result.put("user", this.user);
-		
-		//获取request
-		
-		@SuppressWarnings("unchecked")
-		Map<String,Object> request = (Map<String,Object>)ac.get("request");
-		////
-		
-		request.put("user",user);
-		
-		date = new Date();
-		
-		
+		if(user!=null) {
+			System.out.println("进入UserBeanAction的execute方法中");
+			System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
+			boolean flag = false;
+			//要处理的代码
+			if(user.getUsername().equals("bcubbo")&&user.getPassword().equals("bcubbo")) {
+				flag =true;
+				ActionContext ac = ActionContext.getContext();
+				//获取动作上下文
+				//将对象放入到session中
+			Map<String,Object> result = ac.getSession();
+			result.put("user", this.user);
 			
+			//获取request
+			
+			@SuppressWarnings("unchecked")
+			Map<String,Object> request = (Map<String,Object>)ac.get("request");
+			////
+			
+			request.put("user",user);
+			
+			date = new Date();
+			
+			
+				
+			}
+				if(flag) {
+					return SUCCESS;
+				}
+				else {
+					return LOGIN;
+				}
+		}else {
+			
+			return "login";
 		}
-		if(flag) {
-			return SUCCESS;
-		}
-		else {
-			return LOGIN;
-		}
+		
 	}//
 	public String login() {
-		
+		if(user!=null) {
 		logger.debug("进入UserBeanAction的login方法中");
 		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
 		boolean flag = false;
@@ -111,14 +114,18 @@ public class UserBeanAction extends ActionSupport {
 		
 			
 		}
-		if(flag) {
-			return SUCCESS;
+			if(flag) {
+				return SUCCESS;
+			}
+			else {
+				return INPUT;
+			}
+		
 		}
 		else {
-			return INPUT;
+			
+			return "login";
 		}
-		
-		
 		
 	}
 	public String add() {
