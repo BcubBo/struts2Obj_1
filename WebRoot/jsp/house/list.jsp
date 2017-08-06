@@ -52,7 +52,7 @@
 <body  >
 	<h1><strong >房屋信息</strong></h1>
 
-	<s:debug/>
+<%-- 	<s:debug/> --%>
 	
 	<table >
 	
