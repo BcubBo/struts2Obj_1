@@ -15,7 +15,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<h1><strong style="color:black;">&copy;BcubBo&trade;</strong></h1>
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>登录界面</strong></h1>
+<<<<<<< HEAD
 	用户登录:<br/><s:property value="#loginMsg"/>
+=======
+	用户登录:<br/>
+>>>>>>> 083a431b05c68072fd833ba56a5cb61cd9cced8d
 	<form action="<%=path %>/user/login.action" method="post">
 	
 		<input type="text" value="" name="user.username"><br/>

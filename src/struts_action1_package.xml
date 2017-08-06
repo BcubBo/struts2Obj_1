@@ -4,12 +4,12 @@
 	"D:\JARPack\struts2lib\struts-2.3.dtd">
 <struts>
 		<package name="action1"  namespace="/jsp/erro" extends="default" >
-    	<action name="index1" class="action.DefaultAction">
+    	<action name="index1.action" class="action.DefaultAction">
     		<result name="success">/jsp/success.jsp</result>
     		<result name="input">/jsp/index2.jsp</result>
     		<result name="aa">/jsp/index3.jsp</result>
     	</action>
-     	<action name="index2" class="action.Default1Action">
+     	<action name="index2.action" class="action.Default1Action">
     		<result name="success">/jsp/success.jsp</result>
     		<result name="input">/jsp/index2.jsp</result>
     		<result name="aa">/jsp/index3.jsp</result>

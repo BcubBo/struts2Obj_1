@@ -4,7 +4,7 @@
 	"D:\JARPack\struts2lib\struts-2.3.dtd">
 <struts>
 	<package name="jsp" namespace="/jsp/erro/jsp/success" extends="default">
-    	<action name="index">
+    	<action name="index.action">
     		<result>/jsp/index2.jsp</result>
     	</action>
     
