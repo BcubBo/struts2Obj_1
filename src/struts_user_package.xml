@@ -5,7 +5,7 @@
 <struts>
 	<package name="user" namespace="/user" extends="default">
 		
-		<action name="login" class="action.UserBeanAction" >
+		<action name="login.action" class="action.UserBeanAction" >
 		
 			<result name="success" >/jsp/login_success.jsp</result>
 			<result name="input">/jsp/login.jsp</result>
@@ -16,7 +16,7 @@
 		
 		</action>
 		
-		<action name="model" class="action.ModelDrivenBeanAction">
+		<action name="model.action" class="action.ModelDrivenBeanAction">
 			<result name="success">/jsp/modeldriven.jsp</result>	
 		
 			<result name="input">/jsp/login.jsp</result>

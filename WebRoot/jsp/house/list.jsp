@@ -113,7 +113,7 @@
 	
 	</table>
 
-	<span style="color:darkblue;font-size:18px;"><s:url var="url" namespace="/house" action="op_view">
+	<span style="color:darkblue;font-size:18px;"><s:url var="url" namespace="/house" action="op_view.action">
 		
 		<s:param name="id" >1001</s:param>
 

@@ -17,7 +17,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<h1><strong>STRUTS2 START!</strong></h1>
 	<h1><strong>登录界面</strong></h1>
 	用户登录:<br/>
-	<form action="<%=path %>/user/login" method="post">
+	<form action="<%=path %>/user/login.action" method="post">
 	<!-- name属性里的名称要写相应的bean名称 -->
 		<input type="text" value="" name="user.username"><br/>
 		<input type="password" value="" name="user.password"><br/>
