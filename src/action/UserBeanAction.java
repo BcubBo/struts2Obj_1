@@ -3,13 +3,16 @@ package action;
 import java.util.Date;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
+
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import po.User;
 
 public class UserBeanAction extends ActionSupport {
-	
+	Logger logger = (Logger)LogManager.getLogger();
 	private User user;
 	private Date date;
 	public Date getDate() {
@@ -33,7 +36,7 @@ public class UserBeanAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 8273548157105774477L;
 	public void validate() {
-		
+		if(user!=null) {
 		if(user.getUsername() == null || user.getPassword() == null) {
 			System.out.println("校验器内部");
 			this.addFieldError("user.username","请输入账户名称");
@@ -41,9 +44,9 @@ public class UserBeanAction extends ActionSupport {
 			this.addFieldError("user.password", "请输入密码");
 			
 			
+			}
+		
 		}
-		
-		
 		
 	}
 
@@ -83,7 +86,7 @@ public class UserBeanAction extends ActionSupport {
 	}//
 	public String login() {
 		
-		System.out.println("进入UserBeanAction的login方法中");
+		logger.debug("进入UserBeanAction的login方法中");
 		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
 		boolean flag = false;
 		//要处理的代码

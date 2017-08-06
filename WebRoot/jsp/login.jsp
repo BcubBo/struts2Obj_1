@@ -21,11 +21,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<input type="text" value="" name="user.username"><br/>
 		<input type="password" value="" name="user.password"><br/>
 		<input type="submit" value="登陆">
-	
+		
 	
 	
 	
 	</form>
-<s:debug/>
+<%-- <s:debug/> --%>
 </body>
 </html>
