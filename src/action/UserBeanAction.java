@@ -32,7 +32,7 @@ public class UserBeanAction extends ActionSupport {
 	 * 
 	 */
 	private static final long serialVersionUID = 8273548157105774477L;
-/*	public void validate() {
+	public void validate() {
 		
 		if(user.getUsername() == null || user.getPassword() == null) {
 			System.out.println("校验器内部");
@@ -45,7 +45,7 @@ public class UserBeanAction extends ActionSupport {
 		
 		
 		
-	}*/
+	}
 
 	@Override
 	public String execute() throws Exception {
@@ -83,7 +83,7 @@ public class UserBeanAction extends ActionSupport {
 	}//
 	public String login() {
 		
-		System.out.println("进入UserBeanAction的execute方法中");
+		System.out.println("进入UserBeanAction的login方法中");
 		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
 		boolean flag = false;
 		//要处理的代码

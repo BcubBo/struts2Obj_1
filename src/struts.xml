@@ -13,12 +13,13 @@
     <!-- Add packages here -->
     <package name="default" namespace="" extends="struts-default">
     		<interceptors>
-		
 			<interceptor name="myInterceptorSerial_001" class="interceptor.TimerInterceptor"></interceptor>
 			<interceptor name="myInterceptor" class="interceptor.LogInterceptor"></interceptor>
+			<interceptor name="methodInterceptor" class="interceptor.MethodInterceptor"></interceptor>
 			<interceptor-stack name="myGlobalInterceptorStack">
 				<interceptor-ref name="myInterceptorSerial_001"></interceptor-ref>
 				<interceptor-ref name="myInterceptor"></interceptor-ref>
+				<interceptor-ref name="methodInterceptor"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 				<!-- 这里要设置默认的拦截器栈进行拦截 -->
 			</interceptor-stack>

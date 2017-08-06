@@ -14,7 +14,7 @@ public class LogInterceptor extends AbstractInterceptor {
 		Object userpassword = invocation.getInvocationContext().getParameters().get("user.password");
 		Object username = invocation.getInvocationContext().getParameters().get("user.username");
 		logger.debug("外层user对象显示:"+userpassword+"\t"+username);
-		if(userpassword == null && username ==null) {
+		if(userpassword == null && username == null) {
 			logger.debug(userpassword+"\t"+username);
 			invocation.getInvocationContext().put("loginMsg","请先登录");
 			System.out.println("user非空判断内部");
@@ -26,7 +26,9 @@ public class LogInterceptor extends AbstractInterceptor {
 		}else {
 
 			logger.info("LogInterceptor启动");
+			
 			String result = invocation.invoke();
+			logger.debug(invocation.getInvocationContext().getSession().get("user"));
 			logger.info("LogInterceptor结束");
 			return result;
 		}
