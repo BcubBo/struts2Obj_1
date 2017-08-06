@@ -35,7 +35,7 @@
 	</strong></h2>
 	<div id="nobr">
 	<h2><strong>
-	<s:form action="/house/add" method="post">
+	<s:form action="/house/add.action" method="post">
 		<s:textfield label="标题" name="house.title"></s:textfield>
 		<s:select label="房屋类型" 
 			name="house.houseType.typeId"
