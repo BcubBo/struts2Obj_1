@@ -30,7 +30,7 @@
 	<h1><s:actionerror/></h1>
 	<h1><s:fielderror></s:fielderror></h1>
 	<br/>
-	<h2><strong>	房屋添加页面<!-- 默认为xhtml --><br/>
+	<h2><strong>	房屋添加页面<br/>
 	<sx:head />
 	<sx:datetimepicker name="house.addDate.addDate" label="发表时间" displayFormat="yyyy-MM-dd"></sx:datetimepicker>
 	</strong></h2>
