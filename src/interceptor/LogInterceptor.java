@@ -1,18 +1,26 @@
 package interceptor;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
 public class LogInterceptor extends AbstractInterceptor {
 	Logger logger = (Logger)LogManager.getLogger();
+
+	
+	
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
 		logger.debug("登陆拦截器启动");
 		Object user = invocation.getInvocationContext().getSession().get("user");
-		
 		if(user!=null) {
 			logger.debug("登陆后的user对象:"+user);
 			String result = invocation.invoke();
@@ -21,6 +29,8 @@ public class LogInterceptor extends AbstractInterceptor {
 
 			//始终要将result进行返回
 		}else {
+
+
 			Object userpassword = invocation
 					.getInvocationContext()
 					.getParameters()

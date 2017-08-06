@@ -34,7 +34,11 @@
 			<result name="add" type="dispatcher">/jsp/house/list.jsp</result>
 
 		</action>
-
+		<action name="fileupload" class="action.FileUploadAction">
+			<result>/jsp/upload_success.jsp</result>
+			<result name="error">/jsp/upload.jsp</result>
+		
+		</action>
 		
 				
 	</package>
