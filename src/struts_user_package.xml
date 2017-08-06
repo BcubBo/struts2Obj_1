@@ -6,7 +6,6 @@
 	<package name="user" namespace="/user" extends="default">
 <!--     	<interceptors>
 		
-<<<<<<< HEAD
 			<interceptor name="myInterceptor" class="interceptor.LogInterceptor"></interceptor>
 			<interceptor-stack name="myGlobalInterceptorStack">
 				<interceptor-ref name="myInterceptor"></interceptor-ref>
@@ -16,13 +15,10 @@
 		</interceptors>		
 		<default-interceptor-ref name="myGlobalInterceptorStack"></default-interceptor-ref> -->	
 		<action name="login" class="action.UserBeanAction" >
-=======
-		<action name="login.action" class="action.UserBeanAction" >
->>>>>>> 083a431b05c68072fd833ba56a5cb61cd9cced8d
 		
 			<result name="success" >/jsp/login_success.jsp</result>
 			<result name="login">/jsp/login.jsp</result>
-			
+			<!--  -->
 	
 			
 			
@@ -30,7 +26,7 @@
 		
 		</action>
 		
-		<action name="model.action" class="action.ModelDrivenBeanAction">
+		<action name="model" class="action.ModelDrivenBeanAction">
 			<result name="success">/jsp/modeldriven.jsp</result>	
 		
 			<result name="input">/jsp/login.jsp</result>
