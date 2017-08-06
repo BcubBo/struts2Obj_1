@@ -156,6 +156,55 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		ActionContext ac = ActionContext.getContext();
 /*		logger.debug("房屋的长度\t"+houses.size());
 		logger.debug("走到list方法返回值前边");*/
+		//标题ok
+		//房屋类型的选择
+		this.houses = Cache.houses;
+		int houseTypeId = house.getHouseType().getTypeId();
+/*		logger.debug(houseTypeId+"<<<<房屋类型id");*/
+		for(HouseType ht :Cache.houseTypes) {
+			
+			
+			if(ht.getTypeId()==houseTypeId) {
+				
+				
+				house.setHouseType(ht);
+/*				logger.debug(ht.getTypeName()+"<<<<<<房屋类型名称");*/
+				break;
+			}
+		}
+		//位置信息
+		//districtId,streetId
+		
+		for(Street st:Cache.streets) {
+			if(st.getStreetId()==streetId) {
+				house.setStreet(st);
+			}
+
+		}
+		for(District dt:Cache.districts) {
+			
+			if(dt.getDistrictId()==(int)districtId) {
+				
+				house.getStreet().setDistrict(dt);
+/*				logger.debug(dt.getDistrictName()+"<<<区域名称");*/
+				break;
+			}
+			
+			
+
+		}
+//	
+		house.setUser(Cache.houses.get(3).getUser());
+		house.setId(1111);
+		house.setStreet(Cache.houses.get(3).getStreet());
+		house.setAddDate(new Date());
+		house.setDistrict(Cache.houses.get(3).getDistrict());
+		
+
+		houses.add(house);
+/*		logger.debug("房屋的长度\t"+houses.size());
+		logger.debug("走到add方法返回值前边");*/
+			
 		return "list";
 		
 		

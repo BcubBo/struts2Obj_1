@@ -3,16 +3,13 @@ package action;
 import java.util.Date;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.core.Logger;
-
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 import po.User;
 
 public class UserBeanAction extends ActionSupport {
-	Logger logger = (Logger)LogManager.getLogger();
+	
 	private User user;
 	private Date date;
 	public Date getDate() {
@@ -42,7 +39,7 @@ public class UserBeanAction extends ActionSupport {
 			this.addFieldError("user.username","请输入账户名称");
 			
 			this.addFieldError("user.password", "请输入密码");
-			logger.info("UserBeanAction的validate方法中");
+			
 			
 		}
 		

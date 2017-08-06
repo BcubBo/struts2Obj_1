@@ -9,9 +9,14 @@
 		
 			<interceptor name="myInterceptorSerial_001" class="interceptor.TimerInterceptor"></interceptor>
 			<interceptor name="myInterceptorSerial_002" class="interceptor.LogInterceptor"></interceptor>
+			<interceptor name="myInterceptorSerial_003" class="interceptor.MethodInterceptor"></interceptor>
 			<interceptor-stack name="myInterceptorStack">
 				<interceptor-ref name="myInterceptorSerial_001"></interceptor-ref>
 				<interceptor-ref name="myInterceptorSerial_002"></interceptor-ref>
+				<interceptor-ref name="myInterceptorSerial_003">
+					<param name="includeMethods">add,list,view,execute</param>
+					<param name="excludeMethods"></param>
+				</interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 				<!-- 这里要设置默认的拦截器栈进行拦截 -->
 			</interceptor-stack>
