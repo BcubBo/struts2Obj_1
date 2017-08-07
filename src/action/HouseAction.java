@@ -128,7 +128,6 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 				logger.debug("validate内部设置的报错位置");
 			
 		}
-	
 		
 		
 		

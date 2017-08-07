@@ -43,9 +43,9 @@ public class UserBeanAction extends ActionSupport {
 			this.addFieldError("user.username","请输入账户名称");
 				
 			this.addFieldError("user.password", "请输入密码");
+			
 			}
 	
-		
 	}
 
 	@Override

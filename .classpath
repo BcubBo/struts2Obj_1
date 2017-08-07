@@ -13,7 +13,7 @@
 	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/javassist-3.11.0.GA.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/ognl-3.0.19.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/struts2-core-2.3.33.jar" sourcepath="C:/Users/fatal/.m2/repository/org/apache/struts/struts2-core/2.3.33/struts2-core-2.3.33-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/xwork-core-2.3.33.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/xwork-core-2.3.33.jar" sourcepath="C:/Users/fatal/.m2/repository/org/apache/struts/xwork/xwork-core/2.3.33/xwork-core-2.3.33-sources.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/taglibs-standard-compat-1.2.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/taglibs-standard-impl-1.2.5.jar"/>
 	<classpathentry exported="true" kind="lib" path="WebRoot/WEB-INF/lib/taglibs-standard-jstlel-1.2.5.jar"/>
