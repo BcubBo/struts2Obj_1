@@ -32,7 +32,7 @@
 		<action name="add" class="action.HouseAction" method="add">
 			<result name="input" type="dispatcher">/jsp/house/add.jsp</result>
 			<result name="add" type="dispatcher">/jsp/house/list.jsp</result>
-
+		<interceptor-ref name="myGlobalInterceptorStack"></interceptor-ref>
 		</action>
 		<action name="fileupload" class="action.FileUploadAction">
 			<result>/jsp/upload_success.jsp</result>

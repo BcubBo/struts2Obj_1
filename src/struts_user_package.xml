@@ -14,10 +14,11 @@
 			</interceptor-stack>
 		</interceptors>		
 		<default-interceptor-ref name="myGlobalInterceptorStack"></default-interceptor-ref> -->	
-		<action name="login" class="action.UserBeanAction" >
+		<action name="login" class="action.UserBeanAction" method="login">
 		
 			<result name="success" >/jsp/login_success.jsp</result>
 			<result name="login">/jsp/login.jsp</result>
+			<result name="input">/jsp/login.jsp</result>			
 			<!--  -->
 	
 			
@@ -26,7 +27,7 @@
 		
 		</action>
 		
-		<action name="model" class="action.ModelDrivenBeanAction">
+<!-- 		<action name="model" class="action.ModelDrivenBeanAction">
 			<result name="success">/jsp/modeldriven.jsp</result>	
 		
 			<result name="input">/jsp/login.jsp</result>
@@ -41,7 +42,7 @@
 			<result name="failed">/jsp/add_failed.jsp</result>
 		
 		</action>
-		<!-- 动态方法是用Demo -->
+		动态方法是用Demo
 		<action name="op" class="action.UserBeanAction">
 		
 			<result name="success">/jsp/login_success.jsp</result>
@@ -55,7 +56,7 @@
 		<action name="user*" class="action.UserBeanAction" method="{1}">
 		
 			<result name="{1}_success">/jsp/{1}_success.jsp</result>
-		</action>
+		</action> -->
 		
 	
 	</package>

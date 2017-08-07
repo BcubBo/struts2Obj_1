@@ -52,13 +52,10 @@ public class LogInterceptor extends AbstractInterceptor {
 				
 				
 			}else {
-	
-				logger.info("LogInterceptor启动");
-				
 				String result = invocation.invoke();
-				logger.debug(invocation.getInvocationContext().getSession().get("user"));
-				logger.info("LogInterceptor结束");
+				//始终要返回result
 				return result;
+				
 			}
 		
 		}

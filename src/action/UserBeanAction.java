@@ -3,6 +3,7 @@ package action;
 import java.util.Date;
 import java.util.Map;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 
@@ -36,9 +37,9 @@ public class UserBeanAction extends ActionSupport {
 	 */
 	private static final long serialVersionUID = 8273548157105774477L;
 	public void validateLogin() {
-
-		if(user.getUsername() == null || user.getPassword() == null) {
-			System.out.println("校验器内部");
+		logger.debug("进入validateLogin校验器中");
+		if(StringUtils.isEmpty(user.getUsername()) && StringUtils.isEmpty(user.getPassword())) {
+			System.out.println("login校验器内部");
 			this.addFieldError("user.username","请输入账户名称");
 				
 			this.addFieldError("user.password", "请输入密码");
@@ -83,48 +84,48 @@ public class UserBeanAction extends ActionSupport {
 				}
 		}else {
 			
-			return "login";
+			return LOGIN;
 		}
 		
 	}//
 	public String login() {
 		if(user!=null) {
-		logger.debug("进入UserBeanAction的login方法中");
-		System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
-		boolean flag = false;
-		//要处理的代码
-		if(user.getUsername().equals("bcubbo")&&user.getPassword().equals("bcubbo")) {
-				flag =true;
-				ActionContext ac = ActionContext.getContext();
-				//获取动作上下文
-				//将对象放入到session中
-			Map<String,Object> result = ac.getSession();
-			result.put("user", this.user);
+			logger.debug("进入UserBeanAction的login方法中");
+			System.out.println(this.getUser().getUsername()+"\n"+this.getUser().getPassword());
+			boolean flag = false;
+			//要处理的代码
+			if(user.getUsername().equals("bcubbo")&&user.getPassword().equals("bcubbo")) {
+					flag =true;
+					ActionContext ac = ActionContext.getContext();
+					//获取动作上下文
+					//将对象放入到session中
+				Map<String,Object> result = ac.getSession();
+				result.put("user", this.user);
+				
+				//获取request
+				
+				@SuppressWarnings("unchecked")
+				Map<String,Object> request = (Map<String,Object>)ac.get("request");
+				////
+				
+				request.put("user",user);
+				
+				date = new Date();
 			
-			//获取request
 			
-			@SuppressWarnings("unchecked")
-			Map<String,Object> request = (Map<String,Object>)ac.get("request");
-			////
-			
-			request.put("user",user);
-			
-			date = new Date();
-		
-		
-			
-		}
-			if(flag) {
-				return SUCCESS;
+				
 			}
-			else {
-				return INPUT;
-			}
-		
+				if(flag) {
+					return SUCCESS;
+				}
+				else {
+					return INPUT;
+				}
+			
 		}
 		else {
 			
-			return "login";
+			return LOGIN;
 		}
 		
 	}

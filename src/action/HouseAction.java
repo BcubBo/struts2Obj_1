@@ -122,7 +122,7 @@ public class HouseAction extends ActionSupport implements RequestAware,SessionAw
 		logger.debug("house对象的值为:"+house);
 		if(house!=null && house.getTitle().length()==0 ) {
 			
-				this.addActionError("请重新输入");//始终添加错误
+				this.addActionError("HouseAction校验器校验>请重新输入");//始终添加错误
 				this.addFieldError("house.title", "标题不能为空");//始终添加错误，无法跳转
 				//添加addActionError
 				logger.debug("validate内部设置的报错位置");
