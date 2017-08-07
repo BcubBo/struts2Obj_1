@@ -53,7 +53,9 @@ public class LogInterceptor extends AbstractInterceptor {
 				
 				
 			}else {
+				logger.debug("登陆拦截器invoke方法调用之前，登陆后");
 				String result = invocation.invoke();
+				logger.debug("登陆拦截器invoke方法调用结束，登陆后");
 				//始终要返回result
 				return result;
 				

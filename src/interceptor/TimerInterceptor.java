@@ -23,7 +23,6 @@ public class TimerInterceptor extends AbstractInterceptor {
 		Date end = new Date();
 		logger.info("TimerInterceptor结束");
 		logger.debug("执行时间："+((end.getTime())-(begin.getTime())));
-		
 		return result;
 	}
 
