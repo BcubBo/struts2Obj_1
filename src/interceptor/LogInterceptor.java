@@ -44,7 +44,8 @@ public class LogInterceptor extends AbstractInterceptor {
 				logger.debug(userpassword+"\t"+username);
 				invocation.
 				getInvocationContext()
-				.put("loginMsg","请先登录");
+				.put("loginMsg","请先登录>>>>>");
+				
 				System.out.println("user非空判断内部");
 				return "login";
 				
