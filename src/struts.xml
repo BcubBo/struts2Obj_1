@@ -45,7 +45,7 @@
 	<include file="struts_house_package.xml"></include>
 	<include file="struts_jsp_package.xml"></include>
 	<include file="struts_user_package.xml"></include>
-
+	<include file="struts_json_package.xml"></include>
 
 
 

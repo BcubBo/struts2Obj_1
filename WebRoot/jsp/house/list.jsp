@@ -38,7 +38,7 @@
 	
 	body{
 	
-		background-image:url('/struts2Obj_1/image/22.gif');
+		background-image:url('/struts2Obj_1/image/21.gif');
 		background-repeat: repeat;
 		
 		
