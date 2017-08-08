@@ -11,6 +11,10 @@ import org.apache.struts2.ServletActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class FileUploadAction extends ActionSupport {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7166140010907299504L;
 	private File[]  pic;
 	private String[]  picContentType;
 	private String[]  picFileName;

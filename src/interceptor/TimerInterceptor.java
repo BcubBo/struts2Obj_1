@@ -11,6 +11,10 @@ import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 import po.User;
 
 public class TimerInterceptor extends AbstractInterceptor {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6270257230182569735L;
 	Logger logger = (Logger)LogManager.getLogger();
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {

@@ -4,6 +4,7 @@ import com.opensymphony.xwork2.ModelDriven;
 
 import po.User;
 
+@SuppressWarnings("rawtypes")
 public class ModelDrivenBeanAction implements ModelDriven {
 	private User user;
 	@Override

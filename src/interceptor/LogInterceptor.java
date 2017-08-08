@@ -1,18 +1,16 @@
 package interceptor;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;
 
 public class LogInterceptor extends AbstractInterceptor {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5938728771151032408L;
 	Logger logger = (Logger)LogManager.getLogger();
 
 	
