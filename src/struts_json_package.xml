@@ -8,8 +8,7 @@
 		<action name="getuser" class="action.JsonAction" >
 		
 			<result type="json" >
-				<param name="includeProperties">user.*,house</param>/jsp/json.jsp
-				
+				<param name="includeProperties">user.*,house</param>
 			</result>
 		</action>
 			
