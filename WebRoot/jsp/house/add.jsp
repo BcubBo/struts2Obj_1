@@ -25,7 +25,7 @@
 
 </style>
 </head>
-<body style="background-image:url('<%=path%>/image/15.gif');
+<body style="background-image:url('<%=path%>/image/24.gif');
 	background-repeat: true;width:1000px;height:1000px;background-color:darkgreen;">
 	<h1><s:actionerror/></h1>
 	<h1><s:fielderror></s:fielderror></h1>

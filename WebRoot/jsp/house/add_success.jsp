@@ -39,7 +39,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>添加方法</title>
 </head>
-<body style="background-image:url('<%=path%>/image/15.gif');
+<body style="background-image:url('<%=path%>/image/21.gif');
 	background-repeat: true;width:1000px;height:1000px;background-color:darkgreen;">
 <h1><strong>添加房屋信息成功</strong></h1>
 	<br/>
