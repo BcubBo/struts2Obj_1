@@ -8,7 +8,9 @@
 <title>文件上传页面</title>
 </head>
 <body>
-<img alt="图片" src='${pageContext.request.contextPath }/uploads/<s:property value="picFileName"/>' />
+<img alt="图片1" src='${pageContext.request.contextPath }/uploads/<s:property value="picFileName[0]"/>' />
+<img alt="图片2" src='${pageContext.request.contextPath }/uploads/<s:property value="picFileName[1]"/>' />
+<img alt="图片3" src='${pageContext.request.contextPath }/uploads/<s:property value="picFileName[2]"/>' />
 	<s:actionmessage/><br/>
 	<s:form action="/house/fileupload.action" enctype="multipart/form-data">
 		<s:file name="pic" label="图片上传"></s:file>

@@ -11,6 +11,8 @@
 	<s:actionmessage/><br/>
 	<s:form action="/house/fileupload.action" enctype="multipart/form-data">
 		<s:file name="pic" label="图片上传"></s:file>
+		<s:file name="pic" label="图片上传"></s:file>
+		<s:file name="pic" label="图片上传"></s:file>
 		<s:submit value="提交"/>
 	</s:form>
 </body>

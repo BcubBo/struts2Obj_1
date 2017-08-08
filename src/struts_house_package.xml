@@ -35,8 +35,14 @@
 		<interceptor-ref name="myGlobalInterceptorStack"></interceptor-ref>
 		</action>
 		<action name="fileupload" class="action.FileUploadAction">
+		<interceptor-ref name="fileUpload">
+			<param name="maximumSize">5000000</param>
+<!-- 			<param name="allowedTypes">application/octet-stream,image/jpeg,image/png</param> -->
+		</interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
 			<result>/jsp/upload_success.jsp</result>
 			<result name="error">/jsp/upload.jsp</result>
+			<result name="input">/errors.jsp</result>
 		
 		</action>
 		

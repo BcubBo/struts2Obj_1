@@ -11,34 +11,59 @@ import org.apache.struts2.ServletActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class FileUploadAction extends ActionSupport {
-	private File pic;
-	private String picContentType;
-	private String picFileName;
+	private File[]  pic;
+	private String[]  picContentType;
+	private String[]  picFileName;
 	Logger logger = (Logger)LogManager.getLogger();
 	public String execute() {
-		logger.debug("文件上传启动");
-		String rootPath = ServletActionContext.getServletContext().getRealPath("/");
-		//
-		String newFileName = rootPath+"/uploads/"+picFileName;
-		//
-		System.out.println(newFileName);
-		File destFile = new File(newFileName);
+		for(int i = 0;i<pic.length;i++) {
+			
+			File f= pic[i];
+			String fname = picFileName[i];
+			
+			
 		
-		
-		try {
-			FileUtils.copyFile(pic, destFile);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			this.addActionMessage("上传失败");
-			return ERROR;
+			logger.debug("文件上传启动");
+			String rootPath = ServletActionContext.getServletContext().getRealPath("/");
+			//
+			String newFileName = rootPath+"/uploads/"+fname;
+			//
+			System.out.println(newFileName);
+			File destFile = new File(newFileName);
+			
+			
+			try {
+				FileUtils.copyFile(f, destFile);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				this.addActionMessage("上传失败");
+				return ERROR;
+				}
 		}
-		
 		logger.debug("文件上传结束");
 		this.addActionMessage("上传成功");
 		return SUCCESS;
 		
 		
+	}
+	public File[] getPic() {
+		return pic;
+	}
+	public void setPic(File[] pic) {
+		this.pic = pic;
+	}
+	public String[] getPicContentType() {
+		return picContentType;
+	}
+	public void setPicContentType(String[] picContentType) {
+		this.picContentType = picContentType;
+	}
+	public String[] getPicFileName() {
+		return picFileName;
+	}
+	public void setPicFileName(String[] picFileName) {
+		this.picFileName = picFileName;
 	}
 
 	
@@ -47,7 +72,7 @@ public class FileUploadAction extends ActionSupport {
 	
 	
 	
-	
+/*	
 	public File getPic() {
 		return pic;
 	}
@@ -70,7 +95,7 @@ public class FileUploadAction extends ActionSupport {
 
 	public void setPicFileName(String picFileName) {
 		this.picFileName = picFileName;
-	}
+	}*/
 	
 	
 	
