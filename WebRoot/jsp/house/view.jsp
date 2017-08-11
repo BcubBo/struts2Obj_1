@@ -38,7 +38,7 @@
 
 </style>
 </head>
-<body style="background-image: url(''/struts2Obj_1/image/23.gif')">	
+<body style="background-image: url('/struts2Obj_1/image/23.gif')">	
 <div>
 	<table >
 	
